@@ -1,0 +1,1625 @@
+{
+  "colors": {
+    "#FFFFFF": 73,
+    "#F7F7F7": 1,
+    "#F6FF00": 1,
+    "#F8F9FA": 1,
+    "#442EB2": 18,
+    "#000000": 48,
+    "#F9F7F7": 3,
+    "#E9ECFE": 4,
+    "#EBEEFE": 2,
+    "#E4EBFD": 1,
+    "#533AFD": 1,
+    "#FFDA1F": 3,
+    "#4E4E50": 3,
+    "#FAFBFF": 1,
+    "#545454": 3
+  },
+  "fonts": {
+    "DM Sans/14/400": {
+      "family": "DM Sans",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 16.899999618530273,
+      "letterSpacing": 0
+    },
+    "Poppins/14/700": {
+      "family": "Poppins",
+      "size": 14,
+      "weight": 700,
+      "lineHeight": 21,
+      "letterSpacing": 0
+    },
+    "Poppins/16/600": {
+      "family": "Poppins",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 1.44
+    },
+    "Poppins/52/700": {
+      "family": "Poppins",
+      "size": 52,
+      "weight": 700,
+      "lineHeight": 62,
+      "letterSpacing": -1
+    },
+    "Poppins/18/400": {
+      "family": "Poppins",
+      "size": 18,
+      "weight": 400,
+      "lineHeight": 28,
+      "letterSpacing": 0
+    },
+    "Poppins/16/500": {
+      "family": "Poppins",
+      "size": 16,
+      "weight": 500,
+      "lineHeight": 26,
+      "letterSpacing": 0
+    },
+    "Poppins/18/700": {
+      "family": "Poppins",
+      "size": 18,
+      "weight": 700,
+      "lineHeight": 24,
+      "letterSpacing": 0
+    },
+    "Poppins/18/600": {
+      "family": "Poppins",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 0
+    },
+    "Poppins/16/400": {
+      "family": "Poppins",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 22,
+      "letterSpacing": 0
+    },
+    "Poppins/18/500": {
+      "family": "Poppins",
+      "size": 18,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0
+    },
+    "Poppins/20/500": {
+      "family": "Poppins",
+      "size": 20,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0
+    },
+    "Poppins/22/600": {
+      "family": "Poppins",
+      "size": 22,
+      "weight": 600,
+      "lineHeight": 33,
+      "letterSpacing": 0
+    },
+    "Poppins/20/600": {
+      "family": "Poppins",
+      "size": 20,
+      "weight": 600,
+      "lineHeight": 30,
+      "letterSpacing": 0
+    },
+    "Outfit/20/500": {
+      "family": "Outfit",
+      "size": 20,
+      "weight": 500,
+      "lineHeight": 25.200000762939453,
+      "letterSpacing": 0
+    },
+    "Poppins/14.566823959350586/700": {
+      "family": "Poppins",
+      "size": 14.566823959350586,
+      "weight": 700,
+      "lineHeight": 21.850234985351562,
+      "letterSpacing": 0
+    },
+    "Inter/13/600": {
+      "family": "Inter",
+      "size": 13,
+      "weight": 600,
+      "lineHeight": 15.732954025268555,
+      "letterSpacing": 0
+    },
+    "Poppins/28/600": {
+      "family": "Poppins",
+      "size": 28,
+      "weight": 600,
+      "lineHeight": 37.18244934082031,
+      "letterSpacing": 0
+    },
+    "Sofia Pro/14/400": {
+      "family": "Sofia Pro",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 16,
+      "letterSpacing": 0
+    }
+  },
+  "gradients": [
+    {
+      "node": "Container",
+      "stops": [
+        {
+          "color": "#0040FF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#0E29EF",
+          "position": "23%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "51%",
+          "opacity": 1
+        },
+        {
+          "color": "#C721A5",
+          "position": "80%",
+          "opacity": 1
+        },
+        {
+          "color": "#FF00CB",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Rectangle 34626277",
+      "stops": [
+        {
+          "color": "#E9ECFE",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#E9ECFE",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Union",
+      "stops": [
+        {
+          "color": "#6421BF",
+          "position": "13%",
+          "opacity": 1
+        },
+        {
+          "color": "#FF00CB",
+          "position": "39%",
+          "opacity": 1
+        },
+        {
+          "color": "#FFFFFF",
+          "position": "61%",
+          "opacity": 1
+        },
+        {
+          "color": "#FFFFFF",
+          "position": "95%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Union",
+      "stops": [
+        {
+          "color": "#FFFFFF",
+          "position": "5%",
+          "opacity": 1
+        },
+        {
+          "color": "#FFFFFF",
+          "position": "39%",
+          "opacity": 1
+        },
+        {
+          "color": "#FF00CB",
+          "position": "61%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "87%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Frame 1707479874",
+      "stops": [
+        {
+          "color": "#B37BFF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Vector",
+      "stops": [
+        {
+          "color": "#6421BF",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Frame 1707479874",
+      "stops": [
+        {
+          "color": "#B37BFF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Vector",
+      "stops": [
+        {
+          "color": "#6421BF",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Frame 2147242347",
+      "stops": [
+        {
+          "color": "#B37BFF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Vector",
+      "stops": [
+        {
+          "color": "#6421BF",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Frame 1707479874",
+      "stops": [
+        {
+          "color": "#B37BFF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Frame 1707479874",
+      "stops": [
+        {
+          "color": "#B37BFF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Vector",
+      "stops": [
+        {
+          "color": "#6421BF",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Frame 1707479874",
+      "stops": [
+        {
+          "color": "#B37BFF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Vector",
+      "stops": [
+        {
+          "color": "#6421BF",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Frame 1707479874",
+      "stops": [
+        {
+          "color": "#B37BFF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Vector",
+      "stops": [
+        {
+          "color": "#6421BF",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Frame 1707479874",
+      "stops": [
+        {
+          "color": "#B37BFF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "div.padding-global",
+      "stops": [
+        {
+          "color": "#7C3AED",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#7C3AED",
+          "position": "30%",
+          "opacity": 0.3700000047683716
+        },
+        {
+          "color": "#7C3AED",
+          "position": "50%",
+          "opacity": 0.699999988079071
+        },
+        {
+          "color": "#7C3AED",
+          "position": "69%",
+          "opacity": 0.4300000071525574
+        },
+        {
+          "color": "#7C3AED",
+          "position": "100%",
+          "opacity": 0
+        }
+      ]
+    },
+    {
+      "node": "Rectangle 34626291",
+      "stops": [
+        {
+          "color": "#BA98F8",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#FFFFFF",
+          "position": "100%",
+          "opacity": 0
+        }
+      ]
+    },
+    {
+      "node": "Rectangle 34626292",
+      "stops": [
+        {
+          "color": "#9876D7",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#FFFFFF",
+          "position": "100%",
+          "opacity": 0
+        }
+      ]
+    },
+    {
+      "node": "Vector 1611",
+      "stops": [
+        {
+          "color": "#FF00CB",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#C721A5",
+          "position": "20%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "49%",
+          "opacity": 1
+        },
+        {
+          "color": "#0E29EF",
+          "position": "77%",
+          "opacity": 1
+        },
+        {
+          "color": "#0040FF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Frame 1000004545",
+      "stops": [
+        {
+          "color": "#0040FF",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#0E29EF",
+          "position": "23%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "51%",
+          "opacity": 1
+        },
+        {
+          "color": "#C721A5",
+          "position": "80%",
+          "opacity": 1
+        },
+        {
+          "color": "#FF00CB",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Rectangle 34626280",
+      "stops": [
+        {
+          "color": "#E9ECFE",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#E9ECFE",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Rectangle 34626281",
+      "stops": [
+        {
+          "color": "#E9ECFE",
+          "position": "0%",
+          "opacity": 0
+        },
+        {
+          "color": "#E9ECFE",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "node": "Footer",
+      "stops": [
+        {
+          "color": "#001192",
+          "position": "0%",
+          "opacity": 1
+        },
+        {
+          "color": "#6421BF",
+          "position": "100%",
+          "opacity": 1
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "text": "Limited-Time Offer: FREE Shipping &  No Tax Included On Starter Orders!",
+      "font": "DM Sans",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 16.899999618530273,
+      "letterSpacing": 0,
+      "color": "#F7F7F7"
+    },
+    {
+      "text": "See If Your Practice Is a Fit",
+      "font": "Poppins",
+      "size": 14,
+      "weight": 700,
+      "lineHeight": 21.134183883666992,
+      "letterSpacing": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "text": "For Dentists & Orthodontists",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 2,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Launch Your Own Teeth Whitening Brand✨",
+      "font": "Poppins",
+      "size": 52,
+      "weight": 700,
+      "lineHeight": 62,
+      "letterSpacing": -1,
+      "color": "#000000"
+    },
+    {
+      "text": "Custom-branded whitening kits for dentists who want higher margins and stronger brand control.",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 400,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Your logo",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 500,
+      "lineHeight": 20,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Your Packaging",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 500,
+      "lineHeight": 20,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Higher Margins",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 500,
+      "lineHeight": 20,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "👉 apply to launch your line",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 700,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "color": "#F9F7F7"
+    },
+    {
+      "text": "40,000+",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 27,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Patients Treated",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 500,
+      "lineHeight": 26,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "“My patients saw results after the first use. Very impressive.”",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 22,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "“My staff love them. Its a great incentive for new patients to start”",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 22,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "“Love how mine turned out and the results have been great for patients”",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 22,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "“We made our pens and box gold. It was perfect for our branding”",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 20,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "“The kits are great and the design process was very easy”",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 22,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "“The whitening works great and patients love the results”",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 22,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "“The kits are great and the design process was very easy”",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 22,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Simple Process",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 1.44,
+      "color": "#442EB2"
+    },
+    {
+      "text": "How it Works?",
+      "font": "Poppins",
+      "size": 52,
+      "weight": 700,
+      "lineHeight": 62,
+      "letterSpacing": -1,
+      "color": "#000000"
+    },
+    {
+      "text": "Send us your logo",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "We design your kit",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Unlimited Revisions",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Shipped to your office",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Send us \nyour logo",
+      "font": "Poppins",
+      "size": 20,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "We design\nyour kit",
+      "font": "Poppins",
+      "size": 20,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Unlimited\nRevisions",
+      "font": "Poppins",
+      "size": 20,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Shipped to\nyour office",
+      "font": "Poppins",
+      "size": 20,
+      "weight": 500,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Why Patients Love It",
+      "font": "Poppins",
+      "size": 52,
+      "weight": 700,
+      "lineHeight": 62,
+      "letterSpacing": -1,
+      "color": "#000000"
+    },
+    {
+      "text": "Unlock Higher Margins",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 1.44,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Calculate The Profit Your Practice Could Be Missing",
+      "font": "Poppins",
+      "size": 52,
+      "weight": 700,
+      "lineHeight": 62,
+      "letterSpacing": -1,
+      "color": "#000000"
+    },
+    {
+      "text": "Calculate For Your Practice",
+      "font": "Poppins",
+      "size": 22,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Profit Per Kit($)",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "$105",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 27,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Total Kits Sold",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "200",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 27,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "$30,992",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 27,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "$7,748",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 27,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Units Sold Per Week",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "4",
+      "font": "Poppins",
+      "size": 20,
+      "weight": 600,
+      "lineHeight": 30,
+      "letterSpacing": 0,
+      "color": "#533AFD"
+    },
+    {
+      "text": "👉 apply to launch your line",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 700,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "color": "#F9F7F7"
+    },
+    {
+      "text": "Most Practices",
+      "font": "Poppins",
+      "size": 22,
+      "weight": 600,
+      "lineHeight": 33,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "sell their first 100 kits in 3–4 months.",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 22,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Our unique formula activates as you chew, delivering benefits for your teeth and gums—all naturally and effortlessly.",
+      "font": "Outfit",
+      "size": 20,
+      "weight": 500,
+      "lineHeight": 25.200000762939453,
+      "letterSpacing": 0,
+      "color": "#4E4E50"
+    },
+    {
+      "text": "Ingredients",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 1.44,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Clinical-Grade Formula",
+      "font": "Poppins",
+      "size": 52,
+      "weight": 700,
+      "lineHeight": 62,
+      "letterSpacing": -1,
+      "color": "#000000"
+    },
+    {
+      "text": "Our unique formula activates as you chew, delivering benefits for your teeth and gums—all naturally and effortlessly.",
+      "font": "Outfit",
+      "size": 20,
+      "weight": 500,
+      "lineHeight": 25.200000762939453,
+      "letterSpacing": 0,
+      "color": "#4E4E50"
+    },
+    {
+      "text": "Before & After",
+      "font": "Poppins",
+      "size": 14.566823959350586,
+      "weight": 700,
+      "lineHeight": 21.850234985351562,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Before & After",
+      "font": "Poppins",
+      "size": 14,
+      "weight": 700,
+      "lineHeight": 21,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Before & After",
+      "font": "Poppins",
+      "size": 14,
+      "weight": 700,
+      "lineHeight": 21,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Before & After",
+      "font": "Poppins",
+      "size": 14,
+      "weight": 700,
+      "lineHeight": 21,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Before & After",
+      "font": "Poppins",
+      "size": 14,
+      "weight": 700,
+      "lineHeight": 21,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Before & After",
+      "font": "Poppins",
+      "size": 14.566823959350586,
+      "weight": 700,
+      "lineHeight": 21.850234985351562,
+      "letterSpacing": 0,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Get started Today",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 1.44,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Choose Your Starter Order",
+      "font": "Poppins",
+      "size": 52,
+      "weight": 700,
+      "lineHeight": 62,
+      "letterSpacing": -1,
+      "color": "#000000"
+    },
+    {
+      "text": "Our unique formula activates as you chew, delivering benefits for your teeth and gums—all naturally and effortlessly.",
+      "font": "Outfit",
+      "size": 20,
+      "weight": 500,
+      "lineHeight": 25.200000762939453,
+      "letterSpacing": 0,
+      "color": "#4E4E50"
+    },
+    {
+      "text": "Product Compare",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 1.44,
+      "color": "#442EB2"
+    },
+    {
+      "text": "How Dental Origin Compares",
+      "font": "Poppins",
+      "size": 52,
+      "weight": 700,
+      "lineHeight": 62,
+      "letterSpacing": -1,
+      "color": "#000000"
+    },
+    {
+      "text": "$34/unit",
+      "font": "Inter",
+      "size": 13,
+      "weight": 600,
+      "lineHeight": 15.732954025268555,
+      "letterSpacing": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "text": "$50/unit",
+      "font": "Inter",
+      "size": 13,
+      "weight": 600,
+      "lineHeight": 15.732954025268555,
+      "letterSpacing": 0,
+      "color": "#545454"
+    },
+    {
+      "text": "$62/unit",
+      "font": "Inter",
+      "size": 13,
+      "weight": 600,
+      "lineHeight": 15.732954025268555,
+      "letterSpacing": 0,
+      "color": "#545454"
+    },
+    {
+      "text": "$110/unit",
+      "font": "Inter",
+      "size": 13,
+      "weight": 600,
+      "lineHeight": 15.732954025268555,
+      "letterSpacing": 0,
+      "color": "#545454"
+    },
+    {
+      "text": "Practice fit",
+      "font": "Poppins",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 24,
+      "letterSpacing": 1.44,
+      "color": "#442EB2"
+    },
+    {
+      "text": "Who This is For",
+      "font": "Poppins",
+      "size": 52,
+      "weight": 700,
+      "lineHeight": 62,
+      "letterSpacing": -1,
+      "color": "#000000"
+    },
+    {
+      "text": "Most successful practices launching a whitening brand have these things in common.",
+      "font": "Poppins",
+      "size": 28,
+      "weight": 600,
+      "lineHeight": 37.18244934082031,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "👉 apply to launch your line",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 700,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "color": "#F9F7F7"
+    },
+    {
+      "text": "4k+",
+      "font": "Poppins",
+      "size": 22,
+      "weight": 600,
+      "lineHeight": 33,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Most practices sell their first 100 kits in 3–4 months.",
+      "font": "Poppins",
+      "size": 18,
+      "weight": 400,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "color": "#000000"
+    },
+    {
+      "text": "Copyright 2024 The Dental Origin. All rights reserved.",
+      "font": "Sofia Pro",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 20,
+      "letterSpacing": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "text": "Privacy Policy",
+      "font": "Sofia Pro",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 16,
+      "letterSpacing": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "text": "Terms & Conditions",
+      "font": "Sofia Pro",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 16,
+      "letterSpacing": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "text": "Terms of Sale",
+      "font": "Sofia Pro",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 20,
+      "letterSpacing": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "text": "Complaints",
+      "font": "Sofia Pro",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 16,
+      "letterSpacing": 0,
+      "color": "#FFFFFF"
+    }
+  ],
+  "images": [
+    {
+      "id": "1:622",
+      "name": "image 2707",
+      "w": 123,
+      "h": 58
+    },
+    {
+      "id": "1:626",
+      "name": "Iridescence 1",
+      "w": 2226,
+      "h": 1845
+    },
+    {
+      "id": "1:675",
+      "name": "Frame 2147242171",
+      "w": 710,
+      "h": 394
+    },
+    {
+      "id": "1:675",
+      "name": "Frame 2147242171",
+      "w": 710,
+      "h": 394
+    },
+    {
+      "id": "1:681",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:686",
+      "name": "Ellipse 141",
+      "w": 34,
+      "h": 34
+    },
+    {
+      "id": "1:711",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:711",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:716",
+      "name": "Ellipse 141",
+      "w": 34,
+      "h": 34
+    },
+    {
+      "id": "1:741",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:746",
+      "name": "Ellipse 141",
+      "w": 34,
+      "h": 34
+    },
+    {
+      "id": "1:771",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:771",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:771",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:776",
+      "name": "Ellipse 141",
+      "w": 34,
+      "h": 34
+    },
+    {
+      "id": "1:801",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:801",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:801",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:806",
+      "name": "Ellipse 141",
+      "w": 34,
+      "h": 34
+    },
+    {
+      "id": "1:831",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:836",
+      "name": "Ellipse 141",
+      "w": 34,
+      "h": 34
+    },
+    {
+      "id": "1:861",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:861",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:861",
+      "name": "Screenshot_2025-05-14_at_18.08.27.webp",
+      "w": 282,
+      "h": 214
+    },
+    {
+      "id": "1:866",
+      "name": "Ellipse 141",
+      "w": 34,
+      "h": 34
+    },
+    {
+      "id": "1:1072",
+      "name": "freepik_edit_Please-upscale-this-image-and-expand-image-image-f 1",
+      "w": 1201,
+      "h": 495
+    },
+    {
+      "id": "1:1156",
+      "name": "359419304_5b657011-de11-43ba-b71d-9c5869066ce4 1",
+      "w": 447,
+      "h": 450
+    },
+    {
+      "id": "1:1161",
+      "name": "Vector 15",
+      "w": 351,
+      "h": 308
+    },
+    {
+      "id": "1:1162",
+      "name": "ChatGPT Image Feb 23, 2026, 07_44_49 PM 1",
+      "w": 439,
+      "h": 472
+    },
+    {
+      "id": "1:1567",
+      "name": "Image+Border",
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "1:1567",
+      "name": "Image+Border",
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "1:1569",
+      "name": "Image+Border",
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "1:1569",
+      "name": "Image+Border",
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "1:1571",
+      "name": "Image+Border",
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "1:1571",
+      "name": "Image+Border",
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "1:1580",
+      "name": "Rectangle 160833",
+      "w": 590,
+      "h": 590
+    },
+    {
+      "id": "1:1699",
+      "name": "div.happy-face",
+      "w": 133,
+      "h": 65
+    },
+    {
+      "id": "1:1741",
+      "name": "Rectangle 160833",
+      "w": 590,
+      "h": 590
+    },
+    {
+      "id": "1:1896",
+      "name": "Frame 1707479893",
+      "w": 292,
+      "h": 304
+    },
+    {
+      "id": "1:1900",
+      "name": "Frame 1707479893",
+      "w": 292,
+      "h": 304
+    },
+    {
+      "id": "1:1904",
+      "name": "Frame 1707479893",
+      "w": 292,
+      "h": 304
+    },
+    {
+      "id": "1:1908",
+      "name": "Frame 1707479893",
+      "w": 292,
+      "h": 304
+    },
+    {
+      "id": "1:1912",
+      "name": "Frame 1707479893",
+      "w": 292,
+      "h": 304
+    },
+    {
+      "id": "1:1916",
+      "name": "Frame 1707479893",
+      "w": 292,
+      "h": 304
+    },
+    {
+      "id": "1:1926",
+      "name": "Rectangle 160833",
+      "w": 590,
+      "h": 590
+    },
+    {
+      "id": "1:2218",
+      "name": "White Logo@4x (1) 1",
+      "w": 78,
+      "h": 35
+    },
+    {
+      "id": "1:2268",
+      "name": "67d02f6a3be7629dd0330c80_tvid-img2pc.webp",
+      "w": 450,
+      "h": 749
+    },
+    {
+      "id": "1:2268",
+      "name": "67d02f6a3be7629dd0330c80_tvid-img2pc.webp",
+      "w": 450,
+      "h": 749
+    },
+    {
+      "id": "1:2277",
+      "name": "IMG_2628 2",
+      "w": 530,
+      "h": 359
+    },
+    {
+      "id": "1:2506",
+      "name": "freepik__expand-image-from-left-and-right-and-give-proper-v__4034 (1) 1",
+      "w": 1218,
+      "h": 640
+    },
+    {
+      "id": "1:2507",
+      "name": "freepik__expand-image-from-left-and-right-and-give-proper-v__4034 (1) 2",
+      "w": 1276,
+      "h": 678
+    },
+    {
+      "id": "1:2510",
+      "name": "2 (4) 1",
+      "w": 970,
+      "h": 706
+    },
+    {
+      "id": "I1:2512;189:4704",
+      "name": "image 2707",
+      "w": 192,
+      "h": 87
+    }
+  ],
+  "sections": [
+    {
+      "name": "Frame 2147242464",
+      "id": "1:614",
+      "w": 1440,
+      "h": 2367,
+      "bg": null,
+      "layout": "VERTICAL"
+    },
+    {
+      "name": "Frame 2147242409",
+      "id": "1:1074",
+      "w": 1440,
+      "h": 9047,
+      "bg": "#E9ECFE",
+      "layout": "VERTICAL"
+    },
+    {
+      "name": "Frame 2147242412",
+      "id": "1:2511",
+      "w": 1440,
+      "h": 220,
+      "bg": "#FFFFFF",
+      "layout": "VERTICAL",
+      "gap": 100
+    }
+  ]
+}

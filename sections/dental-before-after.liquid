@@ -1,0 +1,56 @@
+{{ 'dental-landing.css' | asset_url | stylesheet_tag }}
+
+<section class="dental-before-after">
+  <div class="dental-before-after__inner">
+    <div class="swiper dental-ba__swiper">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide">
+            <div class="dental-ba-card" style="width:308px;height:320px;border-radius:21px;padding:8px;background:#fff;" {{ block.shopify_attributes }}>
+              {%- if block.settings.image != blank -%}
+                <img src="{{ block.settings.image | image_url: width: 616 }}" alt="Before and After" width="292" height="304" loading="lazy" style="border-radius:15px;width:292px;height:304px;object-fit:cover;display:block;">
+              {%- else -%}
+                <img src="{{ 'dental-ba-' | append: forloop.index | append: '.png' | asset_url }}" alt="Before and After" width="292" height="304" loading="lazy" style="border-radius:15px;width:292px;height:304px;object-fit:cover;display:block;">
+              {%- endif -%}
+              <span class="dental-ba-card__badge">Before &amp; After</span>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dental Before & After",
+  "tag": "div",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "result",
+      "name": "Result Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Before & After Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dental Before & After",
+      "blocks": [
+        { "type": "result" },
+        { "type": "result" },
+        { "type": "result" },
+        { "type": "result" },
+        { "type": "result" },
+        { "type": "result" }
+      ]
+    }
+  ]
+}
+{% endschema %}

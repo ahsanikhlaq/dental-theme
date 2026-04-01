@@ -1,0 +1,72 @@
+{{ 'dental-landing.css' | asset_url | stylesheet_tag }}
+
+<section class="dental-why-switch">
+  <div class="dental-why-switch__inner">
+    <div class="dental-why-switch__content">
+      <span class="dental-hero__badge">{{ section.settings.badge_text }}</span>
+      <h2 class="dental-why-switch__heading">{{ section.settings.heading }}</h2>
+
+      <ul class="dental-why-switch__benefits">
+        {%- assign benefits = section.settings.benefits | split: '|' -%}
+        {%- for benefit in benefits -%}
+          <li class="dental-why-switch__benefit">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12" fill="none" stroke="#442EB2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {{ benefit | strip }}
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- if section.settings.testimonial_quote != blank -%}
+        <div class="dental-testimonial-bar">
+          {%- if section.settings.testimonial_avatar != blank -%}
+            <img class="dental-testimonial-bar__avatar" src="{{ section.settings.testimonial_avatar | image_url: width: 116 }}" alt="{{ section.settings.testimonial_name }}" width="58" height="56" loading="lazy">
+          {%- else -%}
+            <img class="dental-testimonial-bar__avatar" src="{{ 'dental-eric-rice-avatar.png' | asset_url }}" alt="{{ section.settings.testimonial_name }}" width="58" height="56" loading="lazy">
+          {%- endif -%}
+          <div>
+            <p class="dental-testimonial-bar__quote">"{{ section.settings.testimonial_quote }}"</p>
+            <span class="dental-testimonial-bar__name">{{ section.settings.testimonial_name }}</span>
+            <span class="dental-testimonial-bar__title">{{ section.settings.testimonial_title }}</span>
+          </div>
+        </div>
+      {%- endif -%}
+
+      <a href="{{ section.settings.cta_link }}" class="dental-cta-btn">👉 {{ section.settings.cta_text | default: 'apply to launch your line' }}</a>
+      <div class="dental-social-proof" style="margin-top:16px">
+        <span class="dental-social-proof__number">{{ section.settings.social_proof_number | default: '4k+' }}</span>
+        <span class="dental-social-proof__label">{{ section.settings.social_proof_text | default: 'Most practices sell their first 100 kits in 3-4 months.' }}</span>
+      </div>
+    </div>
+
+    <div class="dental-why-switch__image">
+      {%- if section.settings.side_image != blank -%}
+        <img src="{{ section.settings.side_image | image_url: width: 1200 }}" alt="{{ section.settings.image_alt | default: 'Why dentists switch' }}" loading="lazy">
+      {%- else -%}
+        <img src="{{ 'dental-why-switch-img.png' | asset_url }}" alt="Why dentists switch" loading="lazy">
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dental Why Switch",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "badge_text", "label": "Badge Text", "default": "Why Practices Switch" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Why Dentists Are Launching Their Own Whitening Brand" },
+    { "type": "textarea", "id": "benefits", "label": "Benefits (separate with |)", "default": "Stop Sending Whitening Revenue to Retail|Increase Per-Patient Revenue|Build Your Practice Brand" },
+    { "type": "textarea", "id": "testimonial_quote", "label": "Testimonial Quote", "default": "Patients love the presentation and margins are much better." },
+    { "type": "text", "id": "testimonial_name", "label": "Testimonial Name", "default": "Eric Rice" },
+    { "type": "text", "id": "testimonial_title", "label": "Testimonial Title", "default": "Founder & Dental Practice Owner" },
+    { "type": "image_picker", "id": "testimonial_avatar", "label": "Testimonial Avatar" },
+    { "type": "image_picker", "id": "side_image", "label": "Side Image" },
+    { "type": "text", "id": "image_alt", "label": "Image Alt Text", "default": "Why dentists switch" },
+    { "type": "url", "id": "cta_link", "label": "CTA Link" },
+    { "type": "text", "id": "cta_text", "label": "CTA Button Text", "default": "apply to launch your line" },
+    { "type": "text", "id": "social_proof_number", "label": "Social Proof Number", "default": "4k+" },
+    { "type": "text", "id": "social_proof_text", "label": "Social Proof Text", "default": "Most practices sell their first 100 kits in 3-4 months." }
+  ],
+  "presets": [{ "name": "Dental Why Switch" }]
+}
+{% endschema %}

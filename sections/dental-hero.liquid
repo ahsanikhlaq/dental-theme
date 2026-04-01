@@ -1,0 +1,364 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Inter:wght@500;600&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+{{ 'dental-landing.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="{{ 'dental-landing.js' | asset_url }}" defer></script>
+
+<div class="dental-page">
+
+{%- comment -%} ============ ANNOUNCEMENT BAR ============ {%- endcomment -%}
+<div class="dental-announcement">
+  <span class="dental-announcement__text">{{ section.settings.announcement_text | replace: 'FREE', '<b>FREE</b>' }}</span>
+  <span class="dental-announcement__dot"><span class="dental-announcement__dot-inner"></span></span>
+</div>
+
+{%- comment -%} ============ HEADER ============ {%- endcomment -%}
+<div class="dental-header">
+  <div class="dental-header__inner">
+    <a href="/" class="dental-header__logo">
+      {% if section.settings.logo != blank %}
+        <img src="{{ section.settings.logo | image_url: width: 246 }}" alt="{{ shop.name }}" width="123" height="58" loading="eager">
+      {% else %}
+        <img src="{{ 'dental-logo.png' | asset_url }}" alt="{{ shop.name }}" width="123" height="58" loading="eager">
+      {% endif %}
+    </a>
+    <a href="{{ section.settings.cta_link }}" class="dental-header__cta">
+      SEE IF YOUR PRACTICE IS A FIT
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+{%- comment -%} ============ HERO SECTION ============ {%- endcomment -%}
+<section class="dental-hero" id="dental-hero-{{ section.id }}">
+  <div class="dental-hero__bg">
+    {%- if section.settings.hero_bg_image != blank -%}
+      <img src="{{ section.settings.hero_bg_image | image_url: width: 2400 }}" alt="" loading="eager" width="2400" height="1140">
+    {%- else -%}
+      <img src="{{ 'dental-hero-bg.png' | asset_url }}" alt="" loading="eager" width="2400" height="1140">
+    {%- endif -%}
+  </div>
+  <div class="dental-hero__overlay"></div>
+
+  <div class="dental-hero__content">
+    <div class="dental-hero__left">
+      <span class="dental-hero__badge">FOR DENTISTS & ORTHODONTISTS</span>
+
+      <h1 class="dental-hero__heading">Launch Your Own Teeth Whitening Brand&#10024;</h1>
+
+      <p class="dental-hero__subheading">{{ section.settings.hero_subheading }}</p>
+
+      <div class="dental-hero__checks">
+        {%- assign checks = section.settings.hero_checks | split: ',' -%}
+        {%- for check in checks -%}
+          <span class="dental-hero__check-item">
+            <span class="dental-hero__check-icon">
+              <img src="{{ 'dental-check-icon.png' | asset_url }}" alt="" width="18" height="18" loading="eager">
+            </span>
+            {{ check | strip }}
+          </span>
+        {%- endfor -%}
+      </div>
+
+      <a href="{{ section.settings.cta_link }}" class="dental-cta-btn">
+        &#128073; APPLY TO LAUNCH YOUR LINE
+      </a>
+
+      <div class="dental-social-proof">
+        <div class="dental-social-proof__avatars">
+          {%- for i in (1..3) -%}
+            {%- assign avatar_key = 'avatar_' | append: i -%}
+            {%- if section.settings[avatar_key] != blank -%}
+              <img class="dental-social-proof__avatar" src="{{ section.settings[avatar_key] | image_url: width: 56 }}" alt="Patient" width="28" height="28" loading="lazy">
+            {%- else -%}
+              <img class="dental-social-proof__avatar" src="{{ 'dental-avatar-' | append: i | append: '.png' | asset_url }}" alt="Patient" width="28" height="28" loading="lazy">
+            {%- endif -%}
+          {%- endfor -%}
+          <span class="dental-social-proof__count">+3k</span>
+        </div>
+        <span class="dental-social-proof__number">{{ section.settings.social_proof_number }}</span>
+        <span class="dental-social-proof__label">{{ section.settings.social_proof_label }}</span>
+      </div>
+    </div>
+
+    <div class="dental-hero__right">
+      {%- if section.settings.hero_image != blank -%}
+        <img class="dental-hero__image" src="{{ section.settings.hero_image | image_url: width: 1420 }}" alt="{{ section.settings.hero_heading | escape }}" width="710" height="394" loading="eager">
+      {%- else -%}
+        <img class="dental-hero__image" src="{{ 'dental-hero-product.png' | asset_url }}" alt="{{ section.settings.hero_heading | escape }}" width="710" height="394" loading="eager">
+      {%- endif -%}
+      {%- if section.settings.hero_video_url != blank -%}
+        <div class="dental-hero__play-btn" data-video-url="{{ section.settings.hero_video_url }}">
+          <svg viewBox="0 0 87 87" width="87" height="87" fill="none">
+            <circle cx="43.5" cy="43.5" r="43.5" fill="rgba(255,255,255,0.25)"/>
+            <polygon points="35,25 65,43.5 35,62" fill="#fff"/>
+          </svg>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ============ TESTIMONIALS CAROUSEL ============ {%- endcomment -%}
+<section class="dental-testimonials">
+  <div class="dental-testimonials__inner">
+    <div class="swiper dental-testimonials__swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% if block.type == 'testimonial' %}
+            <div class="swiper-slide" {{ block.shopify_attributes }}>
+              <div class="dental-testimonial-card">
+                <div class="dental-testimonial-card__image-wrap">
+                  {%- if block.settings.image != blank -%}
+                    <img class="dental-testimonial-card__image" src="{{ block.settings.image | image_url: width: 612 }}" alt="{{ block.settings.author }}" width="306" height="214" loading="lazy">
+                  {%- else -%}
+                    <img class="dental-testimonial-card__image" src="{{ 'dental-testimonial-product.png' | asset_url }}" alt="{{ block.settings.author }}" width="306" height="214" loading="lazy">
+                  {%- endif -%}
+                </div>
+                <div class="dental-testimonial-card__body">
+                  <div class="dental-testimonial-card__stars">
+                    {%- for i in (1..5) -%}
+                      <svg class="dental-testimonial-card__star" viewBox="0 0 24 24" fill="#FFB800"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    {%- endfor -%}
+                  </div>
+                  <p class="dental-testimonial-card__quote">"{{ block.settings.quote }}"</p>
+                  <div class="dental-testimonial-card__author">
+                    <div class="dental-testimonial-card__author-info">
+                      {%- if block.settings.avatar != blank -%}
+                        <img class="dental-testimonial-card__avatar" src="{{ block.settings.avatar | image_url: width: 68 }}" alt="{{ block.settings.author }}" width="34" height="34" loading="lazy">
+                      {%- else -%}
+                        <div class="dental-testimonial-card__avatar" style="background:#ddd;border-radius:50%;width:34px;height:34px;"></div>
+                      {%- endif -%}
+                      <div>
+                        <div class="dental-testimonial-card__name">{{ block.settings.author }}</div>
+                        <div class="dental-testimonial-card__verified">
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="#7C3AED"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                          VERIFIED BUYER
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dental-testimonial-card__author-stars">
+                      {%- for i in (1..5) -%}
+                        <svg class="dental-testimonial-card__star" viewBox="0 0 24 24" fill="#FFB800" width="12" height="12"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>{%- comment -%} end .dental-page {%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Dental Hero",
+  "tag": "div",
+  "class": "dental-hero-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Announcement Bar"
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "default": "Limited-Time Offer: FREE Shipping & No Tax Included On Starter Orders!"
+    },
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "header_cta_text",
+      "label": "Header CTA Text",
+      "default": "SEE IF YOUR PRACTICE IS A FIT"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    },
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_bg_image",
+      "label": "Hero Background Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_badge",
+      "label": "Badge Text",
+      "default": "FOR DENTISTS & ORTHODONTISTS"
+    },
+    {
+      "type": "text",
+      "id": "hero_heading",
+      "label": "Heading",
+      "default": "Launch Your Own Teeth Whitening Brand"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_subheading",
+      "label": "Subheading",
+      "default": "Custom-branded whitening kits for dentists who want higher margins and stronger brand control."
+    },
+    {
+      "type": "text",
+      "id": "hero_checks",
+      "label": "Checkmark Items (comma separated)",
+      "default": "Your Logo, Your Packaging, Higher Margins"
+    },
+    {
+      "type": "text",
+      "id": "hero_cta_text",
+      "label": "Hero CTA Text",
+      "default": "APPLY TO LAUNCH YOUR LINE"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "url",
+      "id": "hero_video_url",
+      "label": "Hero Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Social Proof"
+    },
+    {
+      "type": "image_picker",
+      "id": "avatar_1",
+      "label": "Avatar 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "avatar_2",
+      "label": "Avatar 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "avatar_3",
+      "label": "Avatar 3"
+    },
+    {
+      "type": "text",
+      "id": "social_proof_number",
+      "label": "Social Proof Number",
+      "default": "40,000+"
+    },
+    {
+      "type": "text",
+      "id": "social_proof_label",
+      "label": "Social Proof Label",
+      "default": "Patients Treated"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Author Avatar"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author Name",
+          "default": "Dr. Michael S."
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "My patients saw results after the first use. Very impressive."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dental Hero",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Michael S.",
+            "quote": "My patients saw results after the first use. Very impressive."
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Brice McMurphy",
+            "quote": "My staff love them. Its a great incentive for new patients to start"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Andrea Gordillo",
+            "quote": "Love how mine turned out and the results have been great for patients"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Nick Laoutaris",
+            "quote": "We made our pens and box gold. It was perfect for our branding"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Brian Webb",
+            "quote": "The kits are great and the design process was very easy"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Zelka Licina",
+            "quote": "The whitening works great and patients love the results"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Sarah Chen",
+            "quote": "Our patients keep coming back for refills. Great addition to our practice"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

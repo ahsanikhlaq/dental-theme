@@ -1,0 +1,147 @@
+{{ 'dental-landing.css' | asset_url | stylesheet_tag }}
+
+<section class="dental-calculator" id="calculator">
+  <div class="dental-container">
+    <div class="dental-section-header dental-animate dental-fade-up">
+      <span class="dental-hero__badge">{{ section.settings.badge_text }}</span>
+      <h2 class="dental-section-heading">{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="dental-calculator__grid">
+      <div class="dental-calculator__inputs dental-animate dental-fade-up">
+        <h3 class="dental-calc-subtitle">{{ section.settings.subtitle }}</h3>
+
+        <!-- Resale Price -->
+        <div class="dental-calc-input" data-input="resale-price">
+          <div class="dental-calc-input__header">
+            <span class="dental-calc-input__label"><span>Your</span> Resale Price</span>
+            <div class="dental-calc-input__controls">
+              <button class="dental-calc-input__btn-minus" data-target="resale-price" aria-label="Decrease resale price">&minus;</button>
+              <span class="dental-calc-input__value">$149</span>
+              <button class="dental-calc-input__btn-plus" data-target="resale-price" aria-label="Increase resale price">+</button>
+            </div>
+          </div>
+          <input class="dental-calc-slider" type="range" id="resale-price" min="50" max="300" value="149" step="5" data-prefix="$">
+        </div>
+
+        <!-- Active Patients Base -->
+        <div class="dental-calc-input" data-input="patients">
+          <div class="dental-calc-input__header">
+            <span class="dental-calc-input__label"><span>Your</span> Active Patients Base</span>
+            <div class="dental-calc-input__controls">
+              <button class="dental-calc-input__btn-minus" data-target="patients" aria-label="Decrease patients">&minus;</button>
+              <span class="dental-calc-input__value">2,000</span>
+              <button class="dental-calc-input__btn-plus" data-target="patients" aria-label="Increase patients">+</button>
+            </div>
+          </div>
+          <input class="dental-calc-slider" type="range" id="patients" min="100" max="10000" value="2000" step="100">
+        </div>
+
+        <!-- Active Patient's Sold (Conversion Rate) -->
+        <div class="dental-calc-input" data-input="conversion">
+          <div class="dental-calc-input__header">
+            <span class="dental-calc-input__label"><span>Active</span> Patient's Sold</span>
+            <div class="dental-calc-input__controls">
+              <button class="dental-calc-input__btn-minus" data-target="conversion" aria-label="Decrease conversion rate">&minus;</button>
+              <span class="dental-calc-input__value">10%</span>
+              <button class="dental-calc-input__btn-plus" data-target="conversion" aria-label="Increase conversion rate">+</button>
+            </div>
+          </div>
+          <input class="dental-calc-slider" type="range" id="conversion" min="1" max="50" value="10" step="1" data-suffix="%">
+        </div>
+
+        <!-- Staff Bonus Per Kit -->
+        <div class="dental-calc-input" data-input="bonus">
+          <div class="dental-calc-input__header">
+            <span class="dental-calc-input__label"><span>Staff</span> Bonus Per Kit</span>
+            <div class="dental-calc-input__controls">
+              <button class="dental-calc-input__btn-minus" data-target="bonus" aria-label="Decrease staff bonus">&minus;</button>
+              <span class="dental-calc-input__value">$10</span>
+              <button class="dental-calc-input__btn-plus" data-target="bonus" aria-label="Increase staff bonus">+</button>
+            </div>
+          </div>
+          <input class="dental-calc-slider" type="range" id="bonus" min="0" max="30" value="10" step="1" data-prefix="$">
+        </div>
+      </div>
+
+      <!-- Results Panel -->
+      <div class="dental-calculator__results dental-animate dental-fade-up">
+        <div class="dental-calculator__results-card">
+          <div class="dental-calc-result-row">
+            <span class="dental-calc-result-row__label"><span>Profit Per Kit</span> ($)</span>
+            <span class="dental-calc-result-row__value" id="result-profit-per-kit">$105</span>
+          </div>
+          <div class="dental-calc-result-row">
+            <span class="dental-calc-result-row__label">Total Kits Sold</span>
+            <span class="dental-calc-result-row__value" id="result-total-kits">200</span>
+          </div>
+          <div class="dental-calc-result-row">
+            <span class="dental-calc-result-row__label"><span>Total Revenue</span> ($)</span>
+            <span class="dental-calc-result-row__value" id="result-total-revenue">$29,800</span>
+          </div>
+          <div class="dental-calc-result-row">
+            <span class="dental-calc-result-row__label"><span>3 Month Revenue</span> ($)</span>
+            <span class="dental-calc-result-row__value" id="result-3m-revenue">$7,450</span>
+          </div>
+          <div class="dental-calc-result-row">
+            <span class="dental-calc-result-row__label"><span>6 Month Revenue</span> ($)</span>
+            <span class="dental-calc-result-row__value" id="result-6m-revenue">$14,900</span>
+          </div>
+          <div class="dental-calc-result-row">
+            <span class="dental-calc-result-row__label">Units Sold Per Week</span>
+            <span class="dental-calc-result-row__value dental-calc-result-row__value--highlight" id="result-per-week">4</span>
+          </div>
+          <div class="dental-calc-total">
+            <span class="dental-calc-total__label">TOTAL PROFIT</span>
+            <span class="dental-calc-total__value" id="result-total-profit">$21,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dental-cta-center dental-animate dental-fade-up" style="margin-top:48px">
+      <a href="{{ section.settings.cta_link }}" class="dental-cta-btn">apply to launch your line &#x1F449;</a>
+      <div class="dental-social-proof" style="margin-top:16px">
+        <span class="dental-social-proof__number">Most Practices</span>
+        <span class="dental-social-proof__label">sell their first 100 kits in 3-4 months.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dental Calculator",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Unlock Higher Margins"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Calculate The Profit Your Practice Could Be Missing"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Calculate For Your Practice"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dental Calculator"
+    }
+  ]
+}
+{% endschema %}

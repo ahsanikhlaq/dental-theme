@@ -1,0 +1,404 @@
+/* Dental Origin Landing Page — Complete Stylesheet
+   All class names use "dental-" prefix consistently */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Inter:wght@500;600&family=Outfit:wght@400;500&display=swap');
+
+:root{
+  --do-purple:#442EB2;--do-deep:#6421BF;--do-cta:#7C3AED;--do-bright:#533AFD;
+  --do-light:#E9ECFE;--do-lighter:#EBEEFE;--do-soft:#F3EFFE;--do-pricing:#FAFBFF;
+  --do-gold:#FBAA19;--do-yellow:#F9D93C;--do-green:#1CC84D;--do-red:#F25B5B;
+  --do-lavender:#B473F9;--do-pink:#C721A5;--do-yellow-acc:#F6FF00;--do-yellow-circle:#FFDA1F;
+  --do-black:#000;--do-dark:#333232;--do-gray:#929292;--do-body:#393939;
+  --do-white:#FFF;--do-off-white:#F8F9FA;--do-near-white:#F7F7F7;--do-border:#E5E7EB;
+  --do-font:'Poppins',sans-serif;--do-dm:'DM Sans',sans-serif;--do-inter:'Inter',sans-serif;
+  --do-max:1440px;--do-content:1240px;--do-pad:100px;
+  --do-grad-announce:linear-gradient(90deg,#0040FF 0%,#1A2AE8 15%,#6421BF 40%,#9B21B0 55%,#C721A5 70%,#E011C0 85%,#FF00CB 100%);
+  --do-grad-cta:linear-gradient(135deg,#442EB2 0%,#7C3AED 100%);
+  --do-grad-footer:linear-gradient(180deg,#001192 0%,#6421BF 100%);
+}
+
+/* Reset */
+.dental-page,.dental-page *,.dental-page *::before,.dental-page *::after{box-sizing:border-box;margin:0;padding:0}
+.dental-page{font-family:var(--do-font);color:var(--do-black);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.dental-page img{max-width:100%;height:auto;display:block}
+.dental-page a{text-decoration:none;color:inherit}
+.dental-page ul,.dental-page ol{list-style:none}
+
+/* Announcement Bar */
+.dental-announcement{width:100%;height:40px;background:var(--do-grad-announce);display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 20px;overflow:hidden}
+.dental-announcement__text{font-family:var(--do-dm);font-size:14px;font-weight:400;line-height:16.9px;color:var(--do-near-white);text-align:center;white-space:nowrap}
+.dental-announcement__text b{font-weight:700;color:#fff}
+.dental-announcement__dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dental-announcement__dot-inner{width:7px;height:7px;border-radius:50%;background:var(--do-yellow-acc);animation:do-pulse 2s ease-in-out infinite}
+@keyframes do-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.4)}}
+
+/* Header */
+.dental-header{width:100%;background:var(--do-off-white)}
+.dental-header__inner{max-width:var(--do-max);margin:0 auto;padding:16px var(--do-pad);display:flex;align-items:center;justify-content:space-between;height:80px}
+.dental-header__logo img{height:58px;width:auto;object-fit:contain}
+.dental-header__cta{display:inline-flex;align-items:center;justify-content:center;padding:0 25px;height:50px;border-radius:900px;background:var(--do-grad-cta);color:#fff;font-family:var(--do-font);font-size:14px;font-weight:700;line-height:21.13px;text-transform:uppercase;border:1px solid rgba(255,255,255,.3);box-shadow:0 3.9px 11.7px rgba(100,33,191,.4);transition:transform .25s ease,box-shadow .25s ease}
+.dental-header__cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(100,33,191,.5);color:#fff}
+
+/* Hero Section */
+.dental-hero{position:relative;width:100%;overflow:hidden}
+.dental-hero__bg{position:absolute;inset:0;z-index:0}
+.dental-hero__bg img{width:100%;height:100%;object-fit:cover}
+.dental-hero__overlay{position:absolute;bottom:0;left:0;right:0;height:612px;background:linear-gradient(to top,rgba(233,236,254,.9) 0%,transparent 100%);z-index:1}
+.dental-hero__content{position:relative;z-index:2;max-width:var(--do-content);margin:0 auto;padding:80px 0;display:flex;align-items:center;gap:60px}
+.dental-hero__left{flex:0 0 466px;display:flex;flex-direction:column;gap:28px}
+.dental-hero__badge{display:inline-flex;align-items:center;padding:8px 24px;background:rgba(255,255,255,.3);backdrop-filter:blur(42px);-webkit-backdrop-filter:blur(42px);border-radius:90px;font-family:var(--do-font);font-size:16px;font-weight:600;line-height:24px;letter-spacing:2px;color:var(--do-purple);text-transform:uppercase;width:fit-content;box-shadow:0 4px 4px rgba(100,33,191,.18)}
+.dental-hero__heading{font-family:var(--do-font);font-size:52px;font-weight:700;line-height:62px;letter-spacing:-1px;color:var(--do-black);text-transform:capitalize}
+.dental-hero__subheading{font-family:var(--do-font);font-size:18px;font-weight:400;line-height:28px;color:var(--do-black)}
+.dental-hero__checks{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.dental-hero__check-item{display:flex;align-items:center;gap:8px;font-family:var(--do-font);font-size:16px;font-weight:500;line-height:20px;color:var(--do-black)}
+.dental-hero__check-icon{width:24px;height:24px;flex-shrink:0}
+.dental-hero__check-icon img{width:100%;height:100%}
+
+/* CTA Button */
+.dental-cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:20px 45px;height:64px;background:var(--do-grad-cta);color:#F9F7F7;font-family:var(--do-font);font-size:18px;font-weight:700;line-height:24px;text-transform:uppercase;border-radius:900px;border:1px solid rgba(255,255,255,.3);cursor:pointer;box-shadow:0 3.9px 11.7px rgba(100,33,191,.4);transition:transform .25s ease,box-shadow .25s ease}
+.dental-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(100,33,191,.5);color:#F9F7F7}
+
+/* Social Proof */
+.dental-social-proof{display:flex;align-items:center;gap:16px}
+.dental-social-proof__avatars{display:flex;align-items:center}
+.dental-social-proof__avatar{width:28px;height:28px;border-radius:50%;border:2px solid #fff;object-fit:cover;margin-left:-6px}
+.dental-social-proof__avatar:first-child{margin-left:0}
+.dental-social-proof__count{width:28px;height:28px;border-radius:50%;background:#fff;font-family:var(--do-font);font-size:12px;font-weight:400;line-height:15.87px;color:var(--do-black);display:flex;align-items:center;justify-content:center;margin-left:-6px;border:2px solid #fff}
+.dental-social-proof__number{font-family:var(--do-font);font-size:18px;font-weight:600;color:var(--do-black);text-transform:uppercase}
+.dental-social-proof__label{font-family:var(--do-font);font-size:16px;font-weight:500;line-height:26px;color:var(--do-black)}
+
+/* Hero Right */
+.dental-hero__right{flex:1;position:relative;border-radius:23px;overflow:hidden;border:3.78px solid var(--do-cta);box-shadow:0 0 41.66px 20.63px rgba(124,58,237,.3)}
+.dental-hero__image{width:100%;height:auto;display:block}
+.dental-hero__play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:87px;height:87px;border-radius:50%;background:rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s}
+.dental-hero__play-btn:hover{background:rgba(0,0,0,.3)}
+.dental-hero__play-btn svg{width:29px;height:34px;fill:#fff;margin-left:4px}
+
+/* Testimonials Carousel */
+.dental-testimonials{padding:0;overflow:visible}
+.dental-testimonials__inner{max-width:var(--do-content);margin:0 auto;padding:0 20px}
+.dental-testimonials .swiper-wrapper{padding-bottom:8px}
+.dental-testimonial-card{width:306px!important;background:#fff;border-radius:21px;padding:12px;display:flex;flex-direction:column;gap:20px;box-shadow:0 1px 18px rgba(163,132,234,.6)}
+.dental-testimonial-card__image{width:100%;height:214px;object-fit:cover;border-radius:10px}
+.dental-testimonial-card__body{display:flex;flex-direction:column;justify-content:space-between;gap:16px;flex:1}
+.dental-testimonial-card__stars{display:flex;gap:2px}
+.dental-testimonial-card__star{width:15px;height:14px;color:var(--do-gold)}
+.dental-testimonial-card__quote{font-family:var(--do-font);font-size:16px;font-weight:400;line-height:22px;color:var(--do-black)}
+.dental-testimonial-card__author{display:flex;align-items:center;justify-content:space-between}
+.dental-testimonial-card__author-info{display:flex;align-items:center;gap:8px}
+.dental-testimonial-card__avatar{width:34px;height:34px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.dental-testimonial-card__name{font-family:var(--do-font);font-size:10px;font-weight:700;line-height:13px;color:var(--do-black);text-transform:uppercase}
+.dental-testimonial-card__verified{display:flex;align-items:center;gap:4px;font-family:var(--do-font);font-size:9px;font-weight:400;color:var(--do-gray);text-transform:uppercase}
+
+/* Section Shared */
+.dental-section-header{text-align:center;margin-bottom:48px}
+.dental-section-header .dental-hero__badge{margin:0 auto 16px;letter-spacing:1.44px}
+.dental-section-heading{font-family:var(--do-font);font-size:52px;font-weight:700;line-height:62px;letter-spacing:-1px;color:var(--do-black);text-transform:capitalize}
+.dental-section-subheading{font-family:var(--do-font);font-size:18px;font-weight:400;line-height:28px;color:var(--do-black);text-align:center;max-width:624px;margin:16px auto 0}
+.dental-container{max-width:var(--do-content);margin:0 auto;padding:0 20px}
+
+/* How It Works */
+.dental-how-it-works{background:var(--do-light);position:relative;overflow:hidden;padding:0}
+.dental-how-it-works__waves{position:absolute;inset:0;z-index:0;pointer-events:none}
+.dental-how-it-works__waves img{width:100%;height:100%;object-fit:cover}
+.dental-how-it-works__inner{position:relative;z-index:2;max-width:var(--do-max);margin:0 auto;padding:0 var(--do-pad)}
+.dental-how-it-works__content{max-width:var(--do-content);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:52px}
+.dental-dashed-line{width:100%;height:39px;opacity:.5}
+.dental-steps{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.dental-step{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:17px 18px;border-radius:10px;background:#fff;box-shadow:0 5.1px 18.2px rgba(100,33,191,.2)}
+.dental-step__icon{width:71px;height:71px;display:flex;align-items:center;justify-content:center}
+.dental-step__icon img{max-width:100%;max-height:100%}
+.dental-step__label{font-family:var(--do-font);font-size:18px;font-weight:500;line-height:28px;color:var(--do-black)}
+.dental-step__arrow{width:43px;height:20px;flex-shrink:0}
+.dental-step__arrow img{width:100%;height:100%}
+.dental-how-it-works__image{width:100%;max-width:1201px;margin:0 auto;display:block;border-radius:4px;box-shadow:19px 28px 15px rgba(0,0,0,.34)}
+
+/* Patients Love */
+.dental-patients-love{background:var(--do-lighter);padding:80px 0}
+.dental-patients-love__grid{display:flex;gap:26px;align-items:stretch;margin-top:42px}
+.dental-patients-love__videos{display:flex;gap:16px;flex:1}
+.dental-video-card{flex:1;border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.dental-video-card__thumb{position:relative;height:444px;overflow:hidden}
+.dental-video-card__thumb img{width:100%;height:100%;object-fit:cover}
+.dental-video-card__play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.dental-video-card__play svg{width:12px;height:12px;fill:var(--do-purple);margin-left:2px}
+.dental-video-card__quote-wrap{padding:16px;display:flex;gap:10px;align-items:flex-start}
+.dental-video-card__quote-icon{width:37px;height:37px;border-radius:50%;background:var(--do-purple);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dental-video-card__quote-icon svg{width:16px;height:16px;fill:#fff}
+.dental-video-card__text{font-family:var(--do-font);font-size:16px;font-weight:400;line-height:22px;color:var(--do-black)}
+.dental-patients-love__side{flex:0 0 464px;border-radius:16px;overflow:hidden}
+.dental-patients-love__side img{width:100%;height:100%;object-fit:cover}
+.dental-nav-arrows{display:flex;gap:12px;justify-content:center;margin-top:24px}
+.dental-nav-arrow{width:48px;height:48px;border-radius:50%;border:1px solid #ddd;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s}
+.dental-nav-arrow--active{background:var(--do-black);border-color:var(--do-black)}
+.dental-nav-arrow svg{width:16px;height:16px}
+.dental-nav-arrow--active svg{color:#fff}
+
+/* What's Inside */
+.dental-whats-inside{padding:80px 0;background:#fff}
+.dental-whats-inside__product{position:relative;margin-bottom:48px}
+.dental-whats-inside__product-img{width:100%;border-radius:16px}
+.dental-feature-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
+.dental-feature-card{background:#fff;border-radius:16px;padding:24px;border:1px solid #eee;display:flex;flex-direction:column;gap:12px}
+.dental-feature-card__icon{width:70px;height:70px;border-radius:16px;background:var(--do-soft);display:flex;align-items:center;justify-content:center}
+.dental-feature-card__icon svg{width:36px;height:36px;color:var(--do-purple)}
+.dental-feature-card__title{font-family:var(--do-font);font-size:18px;font-weight:500;line-height:28px;color:var(--do-purple)}
+.dental-feature-card__desc{font-family:var(--do-font);font-size:16px;font-weight:400;line-height:22px;color:var(--do-black)}
+.dental-cta-center{text-align:center;margin-top:32px}
+.dental-cta-center .dental-social-proof{justify-content:center;margin-top:16px}
+
+/* Calculator */
+.dental-calculator{padding:80px 0;background:#fff}
+.dental-calculator__grid{display:flex;gap:42px;align-items:flex-start;margin-top:48px}
+.dental-calculator__inputs{flex:1;display:flex;flex-direction:column;gap:25px}
+.dental-calc-subtitle{font-family:var(--do-font);font-size:22px;font-weight:600;line-height:24px;color:var(--do-purple);margin-bottom:8px}
+.dental-calc-input{background:#fff;border:1px solid #eee;border-radius:16px;padding:20px 24px;display:flex;flex-direction:column;gap:12px}
+.dental-calc-input__header{display:flex;justify-content:space-between;align-items:center}
+.dental-calc-input__label{font-family:var(--do-font);font-size:18px;font-weight:400;line-height:28px;color:var(--do-black)}
+.dental-calc-input__label span{color:var(--do-purple)}
+.dental-calc-input__controls{display:flex;align-items:center;background:var(--do-soft);border-radius:12px;overflow:hidden}
+.dental-calc-btn,.dental-calc-input__btn-minus,.dental-calc-input__btn-plus{width:48px;height:52px;border:none;background:var(--do-soft);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--do-black);transition:background .2s}
+.dental-calc-btn:hover,.dental-calc-input__btn-minus:hover,.dental-calc-input__btn-plus:hover{background:#e5dcfc}
+.dental-calc-input__btn-plus{background:var(--do-purple);color:#fff;border-radius:0 12px 12px 0}
+.dental-calc-input__btn-plus:hover{background:var(--do-deep)}
+.dental-calc-value,.dental-calc-input__value{width:100px;text-align:center;font-family:var(--do-inter);font-size:20px;font-weight:500;line-height:52px;color:var(--do-black);background:transparent;border:none;outline:none}
+.dental-calc-slider{width:100%;height:4px;-webkit-appearance:none;appearance:none;background:var(--do-border);border-radius:2px;outline:none}
+.dental-calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--do-purple);cursor:pointer;box-shadow:0 0 4px rgba(68,46,178,.3)}
+.dental-calc-slider::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--do-purple);cursor:pointer}
+.dental-calculator__results{flex:0 0 500px;background:#fff;border-radius:20px;padding:16px;box-shadow:0 4px 24px rgba(100,33,191,.1);position:relative;overflow:hidden}
+.dental-calculator__results::before{content:'';position:absolute;bottom:0;left:0;right:0;height:280px;background:linear-gradient(135deg,#FF00CB 0%,#C721A5 20%,#6421BF 49%,#0E29EF 77%,#0040FF 100%);opacity:.15;border-radius:20px;pointer-events:none}
+.dental-calculator__results-card{position:relative;z-index:2;background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border-radius:20px;padding:16px}
+.dental-calc-result-row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.dental-calc-result-row__label{font-family:var(--do-font);font-size:18px;font-weight:600;color:var(--do-black)}
+.dental-calc-result-row__label span{color:var(--do-purple)}
+.dental-calc-result-row__value{font-family:var(--do-font);font-size:20px;font-weight:600;line-height:30px;color:var(--do-black);transition:all .3s}
+.dental-calc-result-row__value--highlight{color:var(--do-bright)}
+.dental-calc-result-row:last-of-type .dental-calc-result-row__label{color:var(--do-purple)}
+.dental-calc-total{background:var(--do-black);border-radius:12px;padding:28px 20px;display:flex;justify-content:space-between;align-items:center;margin-top:16px;position:relative;overflow:hidden}
+.dental-calc-total::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:4px;background:linear-gradient(90deg,#FF00CB,#6421BF,#0040FF);border-radius:0 0 12px 12px}
+.dental-calc-total__label,.dental-calc-total__value{font-family:var(--do-font);font-size:20px;font-weight:700;line-height:30px;color:#fff;text-transform:uppercase}
+
+/* Ingredients */
+.dental-ingredients{padding:80px 0 100px;background:var(--do-light);position:relative;overflow:hidden}
+.dental-ingredients__values{display:flex;justify-content:center;gap:37px;margin-bottom:48px;flex-wrap:wrap}
+.dental-ingredients__value-item{display:flex;align-items:center;gap:12px;font-family:var(--do-font);font-size:16px;font-weight:500;line-height:20px;color:var(--do-black)}
+.dental-ingredients__value-icon{width:39px;height:39px;border-radius:50%;background:var(--do-lavender);display:flex;align-items:center;justify-content:center}
+.dental-ingredients__value-icon svg{width:20px;height:20px;fill:#fff}
+.dental-ingredients__grid{display:flex;gap:32px;align-items:flex-start;margin-top:48px}
+.dental-ingredients__product{flex:0 0 auto}
+.dental-ingredients__product-circle{width:571px;height:570px;border-radius:50%;background:var(--do-yellow-circle);display:flex;align-items:center;justify-content:center}
+.dental-ingredients__product-img{max-width:80%;max-height:80%;object-fit:contain}
+.dental-ingredients__cards{flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.dental-ingredient-card{background:#fff;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.dental-ingredient-card__tag{font-family:var(--do-font);font-size:16px;font-weight:400;line-height:22px;color:var(--do-purple)}
+.dental-ingredient-card__name{font-family:var(--do-font);font-size:18px;font-weight:600;line-height:27px;color:var(--do-black)}
+.dental-ingredient-card__list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.dental-ingredient-card__list li{display:flex;align-items:flex-start;gap:8px;font-family:var(--do-font);font-size:16px;font-weight:400;line-height:22px;color:var(--do-black)}
+.dental-ingredient-card__list li svg{width:18px;height:18px;flex-shrink:0;color:var(--do-purple);margin-top:2px}
+
+/* Before & After */
+.dental-before-after{padding:60px 0;background:#fff;overflow:hidden}
+.dental-before-after__inner{max-width:var(--do-content);margin:0 auto;padding:0 20px}
+.dental-ba-card{width:308px;height:320px;border-radius:21px;padding:8px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.06);flex-shrink:0;position:relative;overflow:hidden}
+.dental-ba-card img{width:100%;height:100%;object-fit:cover;border-radius:15px}
+.dental-ba-card__badge{position:absolute;top:20px;left:20px;background:#fff;padding:8px 14px;border-radius:900px;font-family:var(--do-font);font-size:14px;font-weight:700;line-height:21.13px;color:var(--do-purple)}
+
+/* Pricing */
+.dental-pricing{padding:100px 0 80px;background:var(--do-pricing)}
+.dental-pricing__grid{display:flex;gap:40px;align-items:flex-start;margin-top:48px}
+.dental-pricing__gallery{flex:0 0 700px}
+.dental-pricing__main-image{width:100%;aspect-ratio:1;border-radius:16px;overflow:hidden;background:#E8DEFD;position:relative;margin-bottom:16px}
+.dental-pricing__main-image img{width:100%;height:100%;object-fit:cover}
+.dental-pricing__thumbs{display:flex;gap:12px}
+.dental-pricing__thumb{width:127px;height:127px;border-radius:12px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .3s}
+.dental-pricing__thumb--active{border-color:var(--do-purple)}
+.dental-pricing__thumb img{width:100%;height:100%;object-fit:cover}
+.dental-pricing__details{flex:1;max-width:499px}
+.dental-pricing__title{font-family:var(--do-font);font-size:38px;font-weight:700;line-height:41.8px;color:var(--do-black);margin-bottom:12px}
+.dental-pricing__rating{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.dental-pricing__stars{display:flex;gap:2px}
+.dental-pricing__star{width:17px;height:16px;color:var(--do-yellow)}
+.dental-pricing__rating-text{font-family:var(--do-font);font-size:16px;font-weight:400;line-height:22px;color:var(--do-dark)}
+.dental-pricing__note{font-family:var(--do-font);font-size:16px;font-weight:400;line-height:22px;color:var(--do-dark);margin-bottom:16px}
+.dental-pricing__savings{font-family:var(--do-font);font-size:22px;font-weight:600;line-height:33px;color:var(--do-cta);margin-bottom:20px}
+.dental-pricing__tiers{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
+.dental-pricing-tier{border:2px solid #eee;border-radius:16px;padding:16px 20px;cursor:pointer;transition:border-color .3s}
+.dental-pricing-tier--selected{border-color:var(--do-cta)}
+.dental-pricing-tier__header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.dental-pricing-tier__left{display:flex;align-items:center;gap:12px}
+.dental-pricing-tier__radio{width:20px;height:20px;border-radius:50%;border:2px solid #ccc;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dental-pricing-tier--selected .dental-pricing-tier__radio{border-color:var(--do-cta)}
+.dental-pricing-tier__radio-dot{width:8px;height:8px;border-radius:50%;background:var(--do-cta);display:none}
+.dental-pricing-tier--selected .dental-pricing-tier__radio-dot{display:block}
+.dental-pricing-tier__name{font-family:var(--do-font);font-size:16px;font-weight:500;line-height:20px;color:var(--do-black)}
+.dental-pricing-tier__badge{display:inline-block;padding:2px 10px;border-radius:50px;font-family:var(--do-font);font-size:10px;font-weight:600;line-height:10px;text-transform:uppercase;letter-spacing:.9px}
+.dental-pricing-tier__badge--popular{background:var(--do-green);color:#fff}
+.dental-pricing-tier__badge--best{background:var(--do-yellow);color:var(--do-black)}
+.dental-pricing-tier__unit{font-family:var(--do-font);font-size:14px;font-weight:400;line-height:20px;color:var(--do-dark)}
+.dental-pricing-tier__prices{display:flex;align-items:center;gap:8px}
+.dental-pricing-tier__current{font-family:var(--do-font);font-size:16px;font-weight:700;color:var(--do-black)}
+.dental-pricing-tier__original{font-family:var(--do-font);font-size:16px;font-weight:700;color:var(--do-gray);text-decoration:line-through}
+.dental-pricing-tier__perks{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap}
+.dental-pricing-tier__perk{font-family:var(--do-font);font-size:14px;font-weight:400;line-height:20px;color:#222}
+.dental-pricing__order-btn{width:100%;text-align:center;font-size:20px;line-height:30px}
+.dental-trust-badges{display:flex;justify-content:space-between;margin-top:16px;gap:16px}
+.dental-trust-badge{display:flex;align-items:center;gap:6px;font-family:var(--do-font);font-size:14px;font-weight:400;line-height:20px;color:var(--do-dark)}
+.dental-trust-badge svg{width:20px;height:20px;color:var(--do-cta);flex-shrink:0}
+
+/* FAQ */
+.dental-faq-list{margin-top:20px}
+.dental-faq-item{border-bottom:1px solid #eee;padding:16px 0}
+.dental-faq-item__header{display:flex;justify-content:space-between;align-items:center;cursor:pointer;width:100%;background:none;border:none;text-align:left;font-family:var(--do-font);font-size:16px;font-weight:500;line-height:20px;color:var(--do-black)}
+.dental-faq-item__header svg{width:16px;height:16px;flex-shrink:0;transition:transform .3s}
+.dental-faq-item__content{display:none;padding-top:12px;font-family:var(--do-font);font-size:14px;font-weight:400;line-height:20px;color:var(--do-dark)}
+.dental-faq-item--open .dental-faq-item__content{display:block}
+.dental-faq-item--open .dental-faq-item__header svg{transform:rotate(180deg)}
+
+/* Comparison */
+.dental-comparison{padding:80px 0;background:#fff}
+.dental-comparison__table{width:100%;border-collapse:separate;border-spacing:0;margin-top:48px;font-family:var(--do-font)}
+.dental-comparison__table th,.dental-comparison__table td{padding:16px 20px;text-align:center;border-bottom:1px solid #eee;font-size:16px;line-height:22px}
+.dental-comparison__table th{font-weight:600;font-size:14px;padding-bottom:20px;vertical-align:bottom}
+.dental-comparison__table th:first-child,.dental-comparison__table td:first-child{text-align:left;font-weight:600;font-size:18px;color:var(--do-black)}
+.dental-comparison__highlight{background:#f8f6ff;font-weight:600;color:var(--do-purple)}
+.dental-check-icon{color:#30AE30}
+.dental-x-icon{color:var(--do-red)}
+.dental-comparison__prices{display:flex;margin-top:24px;border-radius:12px;overflow:hidden}
+.dental-comparison__price-item{flex:1;padding:20px;display:flex;flex-direction:column;align-items:center;gap:4px;background:#F5F5FF}
+.dental-comparison__price-item:first-child{background:var(--do-grad-announce);color:#fff}
+.dental-comparison__price-item:first-child .dental-comparison__price{color:#fff}
+.dental-comparison__price-label{font-family:var(--do-font);font-size:12px;font-weight:500;line-height:16px}
+.dental-comparison__price{font-family:var(--do-inter);font-size:13px;font-weight:600;line-height:15.73px;color:#545454}
+
+/* Who For */
+.dental-who-for{padding:80px 0;background:#fff}
+.dental-who-for__grid{display:flex;gap:32px;align-items:stretch;margin-top:48px}
+.dental-who-for__video{flex:0 0 450px;border-radius:24px;overflow:hidden;position:relative}
+.dental-who-for__video img{width:100%;height:100%;object-fit:cover}
+.dental-who-for__content{flex:1;display:flex;flex-direction:column;gap:24px}
+.dental-who-for__intro{font-family:var(--do-font);font-size:28px;font-weight:600;line-height:37.18px;color:var(--do-black)}
+.dental-trait-cards{display:flex;gap:16px}
+.dental-trait-card{flex:1;background:#fff;border-radius:16px;padding:20px;border:1px solid #eee;display:flex;flex-direction:column;gap:12px}
+.dental-trait-card__icon{width:80px;height:80px;border-radius:50%;background:var(--do-purple);display:flex;align-items:center;justify-content:center}
+.dental-trait-card__icon svg{width:40px;height:40px;color:#fff}
+.dental-trait-card__badge{display:inline-block;padding:8px 16px;background:var(--do-deep);border-radius:50px;font-family:var(--do-font);font-size:16px;font-weight:600;line-height:24px;color:#fff;width:fit-content}
+.dental-trait-card__title{font-family:var(--do-font);font-size:16px;font-weight:600;line-height:22px;color:var(--do-purple)}
+.dental-trait-card__desc{font-family:var(--do-font);font-size:14px;font-weight:400;line-height:20px;color:var(--do-body)}
+.dental-trait-card__stat{margin-top:auto;font-family:var(--do-font);font-size:12px;font-weight:400;color:var(--do-deep)}
+.dental-trait-card__stat strong{display:block;font-size:14px;font-weight:700}
+
+/* Why Switch */
+.dental-why-switch{padding:80px 0 90px;background:#fff;position:relative;overflow:hidden}
+.dental-why-switch__inner{max-width:var(--do-content);margin:0 auto;padding:0 20px;display:flex;gap:74px;align-items:center}
+.dental-why-switch__content{flex:0 0 576px}
+.dental-why-switch__heading{font-family:var(--do-font);font-size:52px;font-weight:700;line-height:62px;letter-spacing:-1px;color:var(--do-black);margin:16px 0 24px}
+.dental-why-switch__benefits{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
+.dental-why-switch__benefit{display:flex;align-items:center;gap:12px;font-family:var(--do-font);font-size:18px;font-weight:400;line-height:28px;color:var(--do-black)}
+.dental-why-switch__benefit svg{width:24px;height:24px;color:var(--do-purple);flex-shrink:0}
+.dental-testimonial-bar{background:#fff;border-radius:16px;padding:20px;display:flex;align-items:center;gap:16px;border:1px solid #eee;margin-bottom:32px}
+.dental-testimonial-bar__avatar{width:58px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.dental-testimonial-bar__quote{font-family:var(--do-font);font-size:16px;font-weight:500;line-height:22px;color:var(--do-black);margin-bottom:4px}
+.dental-testimonial-bar__name{font-family:var(--do-font);font-size:16px;font-weight:500;color:var(--do-black)}
+.dental-testimonial-bar__title{font-family:var(--do-font);font-size:14px;font-weight:500;color:var(--do-dark)}
+.dental-why-switch__image{flex:1;border-radius:16px;overflow:hidden}
+.dental-why-switch__image img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+
+/* Footer */
+.dental-footer{background:var(--do-grad-footer);padding:32px var(--do-pad)}
+.dental-footer__inner{max-width:var(--do-max);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:33px}
+.dental-footer__logo img{height:65px;width:auto;filter:brightness(0) invert(1)}
+.dental-footer__bottom{width:100%;display:flex;align-items:center;justify-content:space-between;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+.dental-footer__copyright{font-family:var(--do-font);font-size:14px;font-weight:400;line-height:20px;color:#fff}
+.dental-footer__links{display:flex;gap:22px}
+.dental-footer__link{font-family:var(--do-font);font-size:14px;font-weight:400;line-height:16px;color:#fff;transition:opacity .3s}
+.dental-footer__link:hover{opacity:.7}
+.dental-footer__socials{display:flex;gap:12px}
+.dental-footer__social{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .3s}
+.dental-footer__social:hover{background:var(--do-purple)}
+.dental-footer__social svg{width:16px;height:16px;fill:currentColor}
+
+/* Animations */
+@keyframes do-fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes do-fadeInRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+.do-animate{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.do-animate--visible{opacity:1;transform:translateY(0)}
+.do-animate-stagger:nth-child(1){transition-delay:0s}
+.do-animate-stagger:nth-child(2){transition-delay:.1s}
+.do-animate-stagger:nth-child(3){transition-delay:.2s}
+.do-animate-stagger:nth-child(4){transition-delay:.3s}
+.do-animate-stagger:nth-child(5){transition-delay:.4s}
+.do-animate-stagger:nth-child(6){transition-delay:.5s}
+.do-animate-stagger:nth-child(7){transition-delay:.6s}
+
+/* Responsive: Tablet */
+@media(max-width:989px){
+  .dental-section-heading{font-size:38px;line-height:42px}
+  .dental-hero__content{flex-direction:column;padding:40px 20px}
+  .dental-hero__left{flex:auto;max-width:100%}
+  .dental-hero__heading{font-size:38px;line-height:42px}
+  .dental-hero__right{width:100%}
+  .dental-header__inner{padding:16px 20px}
+  .dental-steps{flex-wrap:wrap;gap:16px}
+  .dental-step__arrow{display:none}
+  .dental-patients-love__grid{flex-direction:column}
+  .dental-patients-love__side{flex:auto;max-height:400px}
+  .dental-patients-love__videos{flex-direction:column}
+  .dental-feature-cards{grid-template-columns:repeat(2,1fr)}
+  .dental-calculator__grid{flex-direction:column}
+  .dental-calculator__results{flex:auto;width:100%}
+  .dental-ingredients__grid{flex-direction:column;align-items:center}
+  .dental-ingredients__product{flex:auto}
+  .dental-ingredients__cards{grid-template-columns:repeat(2,1fr);width:100%}
+  .dental-pricing__grid{flex-direction:column}
+  .dental-pricing__gallery{flex:auto;width:100%}
+  .dental-pricing__details{max-width:100%}
+  .dental-who-for__grid{flex-direction:column}
+  .dental-who-for__video{flex:auto;height:400px}
+  .dental-trait-cards{flex-direction:column}
+  .dental-why-switch__inner{flex-direction:column;gap:40px}
+  .dental-why-switch__content{flex:auto}
+  .dental-why-switch__heading{font-size:38px;line-height:42px}
+  .dental-footer{padding:32px 20px}
+  .dental-footer__bottom{flex-direction:column;gap:16px;text-align:center}
+  .dental-footer__links{flex-wrap:wrap;justify-content:center}
+}
+
+/* Responsive: Mobile */
+@media(max-width:749px){
+  :root{--do-pad:16px}
+  .dental-section-heading{font-size:28px;line-height:36px}
+  .dental-hero__heading{font-size:32px;line-height:38px}
+  .dental-hero__subheading{font-size:16px;line-height:24px}
+  .dental-hero__left{gap:20px}
+  .dental-hero__checks{flex-direction:column;align-items:flex-start;gap:8px}
+  .dental-cta-btn{font-size:16px;padding:16px 32px;width:100%;justify-content:center;height:auto}
+  .dental-testimonial-card{width:260px!important}
+  .dental-feature-cards{grid-template-columns:1fr}
+  .dental-ingredients__product-circle{width:300px;height:300px}
+  .dental-ingredients__cards{grid-template-columns:1fr}
+  .dental-pricing__title{font-size:28px;line-height:32px}
+  .dental-pricing__savings{font-size:18px;line-height:24px}
+  .dental-trust-badges{flex-direction:column;gap:8px}
+  .dental-comparison__table{display:block;overflow-x:auto;font-size:12px}
+  .dental-comparison__table th,.dental-comparison__table td{padding:10px 8px;white-space:nowrap}
+  .dental-who-for__intro{font-size:22px;line-height:30px}
+  .dental-why-switch__heading{font-size:32px;line-height:38px}
+  .dental-comparison__prices{flex-wrap:wrap}
+  .dental-comparison__price-item{flex:0 0 50%}
+  .dental-announcement__text{font-size:12px}
+  .dental-pricing__thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+  .dental-pricing__thumb{width:100%;height:auto;aspect-ratio:1}
+  .dental-hero__badge{font-size:14px;letter-spacing:1px}
+  .dental-ba-card{width:260px;height:280px}
+}
+
+@media(max-width:480px){
+  .dental-hero__heading{font-size:28px;line-height:34px}
+  .dental-steps{gap:12px}
+  .dental-step{padding:12px}
+  .dental-step__icon{width:50px;height:50px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .do-animate{opacity:1;transform:none;transition:none}
+  .dental-announcement__dot-inner{animation:none}
+}

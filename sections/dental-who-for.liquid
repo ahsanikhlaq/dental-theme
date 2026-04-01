@@ -1,0 +1,99 @@
+{{ 'dental-landing.css' | asset_url | stylesheet_tag }}
+
+<section class="dental-who-for">
+  <div class="dental-container">
+    <div class="dental-section-header">
+      <span class="dental-hero__badge">{{ section.settings.badge_text }}</span>
+      <h2 class="dental-section-heading">{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="dental-who-for__grid">
+      <div class="dental-who-for__video">
+        {%- if section.settings.video_image != blank -%}
+          <img src="{{ section.settings.video_image | image_url: width: 900 }}" alt="{{ section.settings.video_alt | default: 'Practice video' }}" width="450" height="749" loading="lazy">
+        {%- else -%}
+          <img src="{{ 'dental-who-for-video.png' | asset_url }}" alt="Practice video" width="450" height="749" loading="lazy">
+        {%- endif -%}
+        <div class="dental-hero__play-btn">
+          <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="white"/></svg>
+        </div>
+      </div>
+
+      <div class="dental-who-for__content">
+        <p class="dental-who-for__intro">{{ section.settings.intro_text }}</p>
+
+        <div class="dental-trait-cards">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'trait' -%}
+              <div class="dental-trait-card" {{ block.shopify_attributes }}>
+                <div class="dental-trait-card__icon">
+                  {%- if block.settings.icon != blank -%}
+                    <img src="{{ block.settings.icon | image_url: width: 80 }}" alt="" width="40" height="40" loading="lazy">
+                  {%- else -%}
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+                  {%- endif -%}
+                </div>
+                <span class="dental-trait-card__badge">Common Trait</span>
+                <h3 class="dental-trait-card__title">{{ block.settings.title }}</h3>
+                <p class="dental-trait-card__desc">{{ block.settings.description }}</p>
+                <div class="dental-trait-card__stat">
+                  {{ block.settings.stat_label }}
+                  <strong>{{ block.settings.stat_value }}</strong>
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+
+    <div class="dental-cta-center">
+      <a href="{{ section.settings.cta_link }}" class="dental-cta-btn">👉 {{ section.settings.cta_text | default: 'apply to launch your line' }}</a>
+      <div class="dental-social-proof">
+        <span class="dental-social-proof__number">{{ section.settings.social_proof_number | default: '4k+' }}</span>
+        <span class="dental-social-proof__label">{{ section.settings.social_proof_text | default: 'Most practices sell their first 100 kits in 3-4 months.' }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dental Who For",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "badge_text", "label": "Badge Text", "default": "Practice Fit" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Who This is For" },
+    { "type": "textarea", "id": "intro_text", "label": "Intro Text", "default": "Most successful practices launching a whitening brand have these things in common." },
+    { "type": "image_picker", "id": "video_image", "label": "Video Thumbnail" },
+    { "type": "text", "id": "video_alt", "label": "Video Alt Text", "default": "Practice video" },
+    { "type": "url", "id": "cta_link", "label": "CTA Link" },
+    { "type": "text", "id": "cta_text", "label": "CTA Button Text", "default": "apply to launch your line" },
+    { "type": "text", "id": "social_proof_number", "label": "Social Proof Number", "default": "4k+" },
+    { "type": "text", "id": "social_proof_text", "label": "Social Proof Text", "default": "Most practices sell their first 100 kits in 3-4 months." }
+  ],
+  "blocks": [
+    {
+      "type": "trait",
+      "name": "Trait Card",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon Image" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Your Patients Already Ask for Whitening" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Patients trust dentist-recommended whitening." },
+        { "type": "text", "id": "stat_label", "label": "Stat Label", "default": "Average resale" },
+        { "type": "text", "id": "stat_value", "label": "Stat Value", "default": "$129-$179" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dental Who For",
+      "blocks": [
+        { "type": "trait", "settings": { "title": "Your Patients Already Ask for Whitening", "description": "Patients trust dentist-recommended whitening.", "stat_label": "Average resale", "stat_value": "$129-$179" } },
+        { "type": "trait", "settings": { "title": "Practices That Want Higher Margins", "description": "Replace generic retail whitening with your own branded.", "stat_label": "Let patients ask", "stat_value": "Create Interest" } },
+        { "type": "trait", "settings": { "title": "Teams Willing To Mention Whitening", "description": "Promote during hygiene or checkout drives most sales.", "stat_label": "Many clinics sell", "stat_value": "20-30 kits/month" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

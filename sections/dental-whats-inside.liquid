@@ -1,0 +1,137 @@
+{{ 'dental-landing.css' | asset_url | stylesheet_tag }}
+
+<section class="dental-whats-inside" id="whats-inside">
+  <div class="dental-container">
+    <div class="dental-section-header dental-animate dental-fade-up">
+      <span class="dental-hero__badge">{{ section.settings.badge_text }}</span>
+      <h2 class="dental-section-heading">{{ section.settings.heading }}</h2>
+      <p class="dental-section-subheading">{{ section.settings.subheading }}</p>
+    </div>
+
+    <div class="dental-whats-inside__product dental-animate dental-fade-up">
+      {%- if section.settings.product_image != blank -%}
+        <img class="dental-whats-inside__product-img" src="{{ section.settings.product_image | image_url: width: 2400 }}" alt="What's inside the kit" width="1200" height="750" loading="lazy">
+      {%- else -%}
+        <img class="dental-whats-inside__product-img" src="{{ 'dental-whats-inside-product.png' | asset_url }}" alt="What's inside the kit" width="1200" height="750" loading="lazy">
+      {%- endif -%}
+    </div>
+
+    <div class="dental-feature-cards">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'feature' -%}
+          <div class="dental-feature-card dental-animate dental-fade-up-stagger" {{ block.shopify_attributes }} style="animation-delay: {{ forloop.index | times: 0.15 }}s;">
+            <div class="dental-feature-card__icon">
+              {%- if block.settings.icon == 'formula' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+              {%- elsif block.settings.icon == 'dental' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+              {%- elsif block.settings.icon == 'demand' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
+              {%- elsif block.settings.icon == 'revenue' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              {%- else -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+              {%- endif -%}
+            </div>
+            <h3 class="dental-feature-card__title">{{ block.settings.title }}</h3>
+            <p class="dental-feature-card__desc">{{ block.settings.description }}</p>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="dental-cta-center dental-animate dental-fade-up">
+      <a href="{{ section.settings.cta_link }}" class="dental-cta-btn">{{ section.settings.cta_text }} &#x1F449;</a>
+      <div class="dental-social-proof">
+        <span class="dental-social-proof__number">4k+</span>
+        <span class="dental-social-proof__label">happy customers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dental What's Inside",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Your Custom Branded Kit"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What's Inside"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "A complete clinic-branded whitening system designed for high patient demand, strong margins, and simple in-office sales."
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product Image with Labels"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text",
+      "default": "apply to launch your line"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Professional Formula"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "35% Carbamide Peroxide - the strongest strength allowed for at-home use."
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "formula", "label": "Formula/Science" },
+            { "value": "dental", "label": "Dental/Globe" },
+            { "value": "demand", "label": "Trending/Demand" },
+            { "value": "revenue", "label": "Revenue/Money" }
+          ],
+          "default": "formula"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dental What's Inside",
+      "blocks": [
+        { "type": "feature", "settings": { "title": "Professional Formula", "description": "35% Carbamide Peroxide - the strongest strength allowed for at-home use.", "icon": "formula" } },
+        { "type": "feature", "settings": { "title": "Built for Dental Practices", "description": "Designed specifically for Dentists who want to sell whitening under their own brand.", "icon": "dental" } },
+        { "type": "feature", "settings": { "title": "High Patient Demand", "description": "Teeth whitening remains one of the most request cosmetic treatments among patients.", "icon": "demand" } },
+        { "type": "feature", "settings": { "title": "Easy Revenue Add-on", "description": "Low cost per kit with strong margins for your practice and low cost for patients.", "icon": "revenue" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

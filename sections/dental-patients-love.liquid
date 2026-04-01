@@ -1,0 +1,163 @@
+{{ 'dental-landing.css' | asset_url | stylesheet_tag }}
+
+<section class="dental-patients-love" id="patients-love">
+  <div class="dental-container">
+    <div class="dental-section-header dental-animate dental-fade-up">
+      <span class="dental-hero__badge">{{ section.settings.badge_text }}</span>
+      <h2 class="dental-section-heading">{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="dental-patients-love__grid">
+      <div class="dental-patients-love__videos">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'video_testimonial' -%}
+            <div class="dental-video-card dental-animate dental-fade-up" {{ block.shopify_attributes }} style="animation-delay: {{ forloop.index | times: 0.15 }}s;" {% if block.settings.video_url != blank %}data-video-url="{{ block.settings.video_url }}"{% endif %}>
+              <div class="dental-video-card__thumb">
+                {%- if block.settings.thumbnail != blank -%}
+                  <img
+                    src="{{ block.settings.thumbnail | image_url: width: 592 }}"
+                    alt="{{ block.settings.quote | truncate: 50 | escape }}"
+                    loading="lazy"
+                    width="296"
+                    height="444"
+                  >
+                {%- else -%}
+                  <img
+                    src="{{ 'dental-video-thumb-' | append: forloop.index | append: '.png' | asset_url }}"
+                    alt="{{ block.settings.quote | truncate: 50 | escape }}"
+                    loading="lazy"
+                    width="296"
+                    height="444"
+                  >
+                {%- endif -%}
+
+                <button class="dental-play-btn" type="button" aria-label="Play video testimonial">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="white" fill-opacity="0.9"/>
+                    <path d="M20 16L34 24L20 32V16Z" fill="#4A4FE4"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="dental-video-card__quote-wrap">
+                <svg class="dental-quote-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" fill="#4A4FE4"/>
+                </svg>
+                <p>"{{ block.settings.quote }}"</p>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="dental-patients-love__side dental-animate dental-fade-up" style="animation-delay: 0.5s;">
+        {%- if section.settings.side_image != blank -%}
+          <img
+            src="{{ section.settings.side_image | image_url: width: 928 }}"
+            alt="Happy patient"
+            loading="lazy"
+            width="464"
+            height="470"
+          >
+        {%- else -%}
+          <img
+            src="{{ 'dental-patients-side.png' | asset_url }}"
+            alt="Happy patient"
+            loading="lazy"
+            width="464"
+            height="470"
+          >
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="dental-nav-arrows dental-animate dental-fade-up">
+      <button class="dental-nav-arrows__prev" type="button" aria-label="Previous testimonials">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="dental-nav-arrows__next" type="button" aria-label="Next testimonials">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dental - Patients Love",
+  "tag": "section",
+  "class": "dental-patients-love-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "40 THOUSAND+ SMILING PATIENTS"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Patients Love It"
+    },
+    {
+      "type": "image_picker",
+      "id": "side_image",
+      "label": "Side Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video_testimonial",
+      "name": "Video Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "thumbnail",
+          "label": "Video Thumbnail"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Patient Quote",
+          "default": "I noticed my teeth were visibly whiter after just a few uses."
+        },
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dental - Patients Love",
+      "blocks": [
+        {
+          "type": "video_testimonial",
+          "settings": {
+            "quote": "I noticed my teeth were visibly whiter after just a few uses. Super affordable."
+          }
+        },
+        {
+          "type": "video_testimonial",
+          "settings": {
+            "quote": "I love how simple this kit was to use. My smile looks brighter already."
+          }
+        },
+        {
+          "type": "video_testimonial",
+          "settings": {
+            "quote": "This worked better than whitening strips and didn't cost a fortune."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

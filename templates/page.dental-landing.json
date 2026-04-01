@@ -1,0 +1,525 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "dental_hero": {
+      "type": "dental-hero",
+      "blocks": {
+        "testimonial_1": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Michael S.",
+            "quote": "My patients saw results after the first use. Very impressive."
+          }
+        },
+        "testimonial_2": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Brice McMurphy",
+            "quote": "My staff love them. Its a great incentive for new patients to start"
+          }
+        },
+        "testimonial_3": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Andrea Gordillo",
+            "quote": "Love how mine turned out and the results have been great for patients"
+          }
+        },
+        "testimonial_4": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Nick Laoutaris",
+            "quote": "We made our pens and box gold. It was perfect for our branding"
+          }
+        },
+        "testimonial_5": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Brian Webb",
+            "quote": "The kits are great and the design process was very easy"
+          }
+        },
+        "testimonial_6": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Zelka Licina",
+            "quote": "The whitening works great and patients love the results"
+          }
+        },
+        "testimonial_7": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Dr. Sarah Chen",
+            "quote": "Our patients keep coming back for refills. Great addition to our practice"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_1",
+        "testimonial_2",
+        "testimonial_3",
+        "testimonial_4",
+        "testimonial_5",
+        "testimonial_6",
+        "testimonial_7"
+      ],
+      "settings": {
+        "announcement_text": "Limited-Time Offer: FREE Shipping & No Tax Included On Starter Orders!",
+        "header_cta_text": "See If Your Practice Is a Fit",
+        "hero_badge": "For Dentists & Orthodontists",
+        "hero_heading": "Launch Your Own Teeth Whitening Brand✨",
+        "hero_subheading": "Custom-branded whitening kits for dentists who want higher margins and stronger brand control.",
+        "hero_checks": "Your logo, Your Packaging, Higher Margins",
+        "hero_cta_text": "apply to launch your line",
+        "social_proof_number": "40,000+",
+        "social_proof_label": "Patients Treated"
+      }
+    },
+    "dental_how_it_works": {
+      "type": "dental-how-it-works",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "label": "Send us your logo"
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "label": "We design your kit"
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "label": "Unlimited Revisions"
+          }
+        },
+        "step_4": {
+          "type": "step",
+          "settings": {
+            "label": "Shipped to your office"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4"
+      ],
+      "settings": {
+        "badge_text": "Simple Process",
+        "heading": "How it Works?"
+      }
+    },
+    "dental_patients_love": {
+      "type": "dental-patients-love",
+      "blocks": {
+        "video_1": {
+          "type": "video_testimonial",
+          "settings": {
+            "quote": "I noticed my teeth were visibly whiter after just a few uses. Super affordable."
+          }
+        },
+        "video_2": {
+          "type": "video_testimonial",
+          "settings": {
+            "quote": "I love how simple this kit was to use. My smile looks brighter already."
+          }
+        },
+        "video_3": {
+          "type": "video_testimonial",
+          "settings": {
+            "quote": "This worked better than whitening strips and didn't cost a fortune."
+          }
+        }
+      },
+      "block_order": [
+        "video_1",
+        "video_2",
+        "video_3"
+      ],
+      "settings": {
+        "badge_text": "40 thousand+ smiling patients",
+        "heading": "Why Patients Love It"
+      }
+    },
+    "dental_whats_inside": {
+      "type": "dental-whats-inside",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "title": "Professional Formula",
+            "description": "35% Carbamide Peroxide - the strongest strength allowed for at-home use.",
+            "icon": "formula"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "title": "Built for Dental Practices",
+            "description": "Designed specifically for Dentists who want to sell whitening under their own brand.",
+            "icon": "dental"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "title": "High Patient Demand",
+            "description": "Teeth whitening remains one of the most request cosmetic treatments among patients.",
+            "icon": "demand"
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "title": "Easy Revenue Add-on",
+            "description": "Low cost per kit with strong margins for your practice and low cost for patients.",
+            "icon": "revenue"
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4"
+      ],
+      "settings": {
+        "badge_text": "Your Custom Branded Kit",
+        "heading": "What's Inside",
+        "subheading": "A complete clinic-branded whitening system designed for high patient demand, strong margins, and simple in-office sales.",
+        "cta_text": "apply to launch your line"
+      }
+    },
+    "dental_calculator": {
+      "type": "dental-calculator",
+      "settings": {
+        "badge_text": "Unlock Higher Margins",
+        "heading": "Calculate The Profit Your Practice Could Be Missing",
+        "subtitle": "Calculate For Your Practice"
+      }
+    },
+    "dental_ingredients": {
+      "type": "dental-ingredients",
+      "blocks": {
+        "ingredient_1": {
+          "type": "ingredient",
+          "settings": {
+            "tag": "Sensitivity Free",
+            "name": "35% Carbamide Peroxide",
+            "bullets": "Breaks down deep intrinsic stains|Gradual oxidation for reduced sensitivity|Designed for multi-session at-home protocols"
+          }
+        },
+        "ingredient_2": {
+          "type": "ingredient",
+          "settings": {
+            "tag": "Desensitizing Gel",
+            "name": "3% Potassium Nitrate",
+            "bullets": "Nerve desensitization|Enamel-safe formulation|Improves overall patient experience"
+          }
+        },
+        "ingredient_3": {
+          "type": "ingredient",
+          "settings": {
+            "tag": "Effective Whitening",
+            "name": "12% Hydrogen Peroxide",
+            "bullets": "Accelerated stain lifting|Ideal for shorter treatment cycles|Visible shade improvement"
+          }
+        },
+        "ingredient_4": {
+          "type": "ingredient",
+          "settings": {
+            "tag": "Accelerator",
+            "name": "LED Mouth Piece",
+            "bullets": "Keep the patients mouth dry|Built-in timer|Designed for at-home compliance"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_1",
+        "ingredient_2",
+        "ingredient_3",
+        "ingredient_4"
+      ],
+      "settings": {
+        "badge_text": "Ingredients",
+        "heading": "Clinical-Grade Formula"
+      }
+    },
+    "dental_before_after": {
+      "type": "dental-before-after",
+      "blocks": {
+        "ba_1": {
+          "type": "result",
+          "settings": {}
+        },
+        "ba_2": {
+          "type": "result",
+          "settings": {}
+        },
+        "ba_3": {
+          "type": "result",
+          "settings": {}
+        },
+        "ba_4": {
+          "type": "result",
+          "settings": {}
+        },
+        "ba_5": {
+          "type": "result",
+          "settings": {}
+        },
+        "ba_6": {
+          "type": "result",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "ba_1",
+        "ba_2",
+        "ba_3",
+        "ba_4",
+        "ba_5",
+        "ba_6"
+      ],
+      "settings": {}
+    },
+    "dental_pricing": {
+      "type": "dental-pricing",
+      "blocks": {
+        "gallery_1": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "gallery_2": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "gallery_3": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "gallery_4": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "gallery_5": {
+          "type": "gallery_image",
+          "settings": {}
+        },
+        "tier_1": {
+          "type": "pricing_tier",
+          "settings": {
+            "name": "50/units - Trial Order",
+            "unit_price": "$46.00/unit",
+            "price": "$2,300.00",
+            "selected": false
+          }
+        },
+        "tier_2": {
+          "type": "pricing_tier",
+          "settings": {
+            "name": "100/units - Startups",
+            "unit_price": "$34.00/unit",
+            "price": "$3,400.00",
+            "original_price": "$4,600.00",
+            "badge": "Most Popular",
+            "badge_style": "popular",
+            "selected": true,
+            "perks": "Money Back Guarantee, Free Shipping, Tax Included"
+          }
+        },
+        "tier_3": {
+          "type": "pricing_tier",
+          "settings": {
+            "name": "250/units - Established",
+            "unit_price": "$29.00/unit",
+            "price": "$7,250.00",
+            "original_price": "$11,500.00",
+            "badge": "BEST DEAL",
+            "badge_style": "best",
+            "selected": false
+          }
+        },
+        "tier_4": {
+          "type": "pricing_tier",
+          "settings": {
+            "name": "1000/units - DSOs",
+            "unit_price": "$26.00/unit",
+            "price": "$26,000.00",
+            "original_price": "$46,000.00",
+            "selected": false
+          }
+        },
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Does The Whitening Work?",
+            "answer": "<p>Yes, our professional-grade formula delivers visible results. Most patients see improvement after the first session.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Why Is The Minimum 50 Units?",
+            "answer": "<p>50 units allows us to offer competitive pricing while covering custom design and production setup costs.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "How Do Offices Use The Kits To Attract New Patients?",
+            "answer": "<p>Many practices use whitening as a new patient special, post-treatment gift, or add-on during hygiene appointments.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_1",
+        "gallery_2",
+        "gallery_3",
+        "gallery_4",
+        "gallery_5",
+        "tier_1",
+        "tier_2",
+        "tier_3",
+        "tier_4",
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "badge_text": "Get started Today",
+        "heading": "Choose Your Starter Order",
+        "product_title": "Custom Teeth Whitening Kit - Pens",
+        "rating_text": "40K+ happy patients",
+        "note_text": "Easy Onboarding will begin after checkout.",
+        "savings_text": "Save Up To 56% Today with DSO Pricing",
+        "order_btn_text": "start your order"
+      }
+    },
+    "dental_comparison": {
+      "type": "dental-comparison",
+      "settings": {
+        "badge_text": "Product Compare",
+        "heading": "How Dental Origin Compares"
+      }
+    },
+    "dental_who_for": {
+      "type": "dental-who-for",
+      "blocks": {
+        "trait_1": {
+          "type": "trait",
+          "settings": {
+            "title": "Your Patients Already Ask for Whitening",
+            "description": "Patients trust dentist-recommended whitening.",
+            "stat_label": "Average resale",
+            "stat_value": "$129-$179"
+          }
+        },
+        "trait_2": {
+          "type": "trait",
+          "settings": {
+            "title": "Practices That Want Higher Margins",
+            "description": "Replace generic retail whitening with your own branded.",
+            "stat_label": "Let patients ask",
+            "stat_value": "Create Interest"
+          }
+        },
+        "trait_3": {
+          "type": "trait",
+          "settings": {
+            "title": "Teams Willing To Mention Whitening",
+            "description": "Promote during hygiene or checkout drives most sales.",
+            "stat_label": "Many clinics sell",
+            "stat_value": "20-30 kits/month"
+          }
+        }
+      },
+      "block_order": [
+        "trait_1",
+        "trait_2",
+        "trait_3"
+      ],
+      "settings": {
+        "badge_text": "Practice Fit",
+        "heading": "Who This is For",
+        "intro_text": "Most successful practices launching a whitening brand have these things in common."
+      }
+    },
+    "dental_why_switch": {
+      "type": "dental-why-switch",
+      "settings": {
+        "badge_text": "Why Practices Switch",
+        "heading": "Why Dentists Are Launching Their Own Whitening Brand",
+        "benefits": "Stop Sending Whitening Revenue to Retail|Increase Per-Patient Revenue|Build Your Practice Brand",
+        "testimonial_quote": "Patients love the presentation and margins are much better.",
+        "testimonial_name": "Eric Rice",
+        "testimonial_title": "Founder & Dental Practice Owner"
+      }
+    },
+    "dental_footer": {
+      "type": "dental-footer",
+      "blocks": {
+        "link_1": {
+          "type": "link",
+          "settings": {
+            "label": "Privacy Policy"
+          }
+        },
+        "link_2": {
+          "type": "link",
+          "settings": {
+            "label": "Terms & Conditions"
+          }
+        },
+        "link_3": {
+          "type": "link",
+          "settings": {
+            "label": "Terms of Sale"
+          }
+        },
+        "link_4": {
+          "type": "link",
+          "settings": {
+            "label": "Complaints"
+          }
+        }
+      },
+      "block_order": [
+        "link_1",
+        "link_2",
+        "link_3",
+        "link_4"
+      ],
+      "settings": {
+        "copyright": "Copyright 2024 The Dental Origin. All rights reserved."
+      }
+    }
+  },
+  "order": [
+    "dental_hero",
+    "dental_how_it_works",
+    "dental_patients_love",
+    "dental_whats_inside",
+    "dental_calculator",
+    "dental_ingredients",
+    "dental_before_after",
+    "dental_pricing",
+    "dental_comparison",
+    "dental_who_for",
+    "dental_why_switch",
+    "dental_footer"
+  ]
+}

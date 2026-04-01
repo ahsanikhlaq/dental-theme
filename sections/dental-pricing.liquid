@@ -1,0 +1,323 @@
+{{ 'dental-landing.css' | asset_url | stylesheet_tag }}
+
+<section class="dental-pricing">
+  <div class="dental-container">
+    <div class="dental-section-header">
+      <span class="dental-hero__badge">{{ section.settings.badge_text }}</span>
+      <h2 class="dental-section-heading">{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="dental-pricing__grid">
+      <!-- Product Gallery -->
+      <div class="dental-pricing__gallery">
+        <div class="dental-pricing__main-image" id="dental-main-product-img">
+          {%- if section.settings.main_image != blank -%}
+            <img src="{{ section.settings.main_image | image_url: width: 1400 }}" alt="Product" width="700" height="700" loading="lazy">
+          {%- else -%}
+            <img src="{{ 'dental-pricing-main.png' | asset_url }}" alt="Product" width="700" height="700" loading="lazy">
+          {%- endif -%}
+        </div>
+        <div class="dental-pricing__thumbs">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'gallery_image' -%}
+              <div class="dental-pricing__thumb{% if forloop.first %} dental-pricing__thumb--active{% endif %}" {{ block.shopify_attributes }}>
+                {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | image_url: width: 254 }}" alt="Product view" width="127" height="127" loading="lazy">
+                {%- else -%}
+                  <div style="width:100%;height:100%;background:#f0f0f0"></div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="dental-pricing__details" style="max-width:499px">
+        <h2 class="dental-pricing__title" style="font-family:'Poppins',sans-serif;font-size:38px;font-weight:700">{{ section.settings.product_title }}</h2>
+
+        <div class="dental-pricing__rating">
+          <div class="dental-pricing__stars">
+            {%- for i in (1..5) -%}
+              <svg class="dental-pricing__star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            {%- endfor -%}
+          </div>
+          <span class="dental-pricing__rating-text">{{ section.settings.rating_text }}</span>
+        </div>
+
+        <p class="dental-pricing__note">{{ section.settings.note_text }}</p>
+        <p class="dental-pricing__savings" style="color:#7C3AED">{{ section.settings.savings_text }}</p>
+
+        <!-- Pricing Tiers -->
+        <div class="dental-pricing__tiers" id="dental-pricing-tiers">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'pricing_tier' -%}
+              <div class="dental-pricing-tier{% if block.settings.selected %} dental-pricing-tier--selected{% endif %}" data-tier="{{ forloop.index }}" {{ block.shopify_attributes }}>
+                <div class="dental-pricing-tier__header">
+                  <div class="dental-pricing-tier__left">
+                    <div class="dental-pricing-tier__radio">
+                      <div class="dental-pricing-tier__radio-dot"></div>
+                    </div>
+                    <div>
+                      <div style="display:flex;align-items:center;gap:8px">
+                        <span class="dental-pricing-tier__name">{{ block.settings.name }}</span>
+                        {%- if block.settings.badge != blank -%}
+                          <span class="dental-pricing-tier__badge {% if block.settings.badge_style == 'popular' %}dental-pricing-tier__badge--popular{% else %}dental-pricing-tier__badge--best{% endif %}">{{ block.settings.badge }}</span>
+                        {%- endif -%}
+                      </div>
+                      <span class="dental-pricing-tier__unit">{{ block.settings.unit_price }}</span>
+                    </div>
+                  </div>
+                  <div class="dental-pricing-tier__prices">
+                    <span class="dental-pricing-tier__current">{{ block.settings.price }}</span>
+                    {%- if block.settings.original_price != blank -%}
+                      <span class="dental-pricing-tier__original">{{ block.settings.original_price }}</span>
+                    {%- endif -%}
+                  </div>
+                </div>
+                {%- if block.settings.perks != blank -%}
+                  <div class="dental-pricing-tier__perks">
+                    {%- assign perks = block.settings.perks | split: ',' -%}
+                    {%- for perk in perks -%}
+                      <span class="dental-pricing-tier__perk">+ {{ perk | strip }}</span>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        <a href="{{ section.settings.order_link }}" class="dental-cta-btn dental-pricing__order-btn" style="width:100%;text-align:center">&#x1F449; {{ section.settings.order_btn_text }}</a>
+
+        <!-- Trust Badges -->
+        <div class="dental-trust-badges">
+          <span class="dental-trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            30-Day Money Back Guarantee
+          </span>
+          <span class="dental-trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25m-2.25 0V6.375c0-.621-.504-1.125-1.125-1.125H2.25"/></svg>
+            FREE Shipping
+          </span>
+          <span class="dental-trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+            Easy Onboarding
+          </span>
+        </div>
+
+        <!-- FAQ -->
+        <div class="dental-faq-list">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'faq' -%}
+              <div class="dental-faq-item" {{ block.shopify_attributes }}>
+                <button class="dental-faq-item__header" onclick="this.parentElement.classList.toggle('dental-faq-item--open')">
+                  {{ block.settings.question }}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="dental-faq-item__content">{{ block.settings.answer }}</div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    /* Tier selection */
+    document.querySelectorAll('.dental-pricing-tier').forEach(function(tier) {
+      tier.addEventListener('click', function() {
+        document.querySelectorAll('.dental-pricing-tier').forEach(function(t) {
+          t.classList.remove('dental-pricing-tier--selected');
+        });
+        this.classList.add('dental-pricing-tier--selected');
+      });
+    });
+
+    /* Thumbnail gallery swap */
+    document.querySelectorAll('.dental-pricing__thumb').forEach(function(thumb) {
+      thumb.addEventListener('click', function() {
+        document.querySelectorAll('.dental-pricing__thumb').forEach(function(t) {
+          t.classList.remove('dental-pricing__thumb--active');
+        });
+        this.classList.add('dental-pricing__thumb--active');
+        var img = this.querySelector('img');
+        if (img) {
+          var mainImg = document.querySelector('#dental-main-product-img img');
+          if (mainImg) {
+            mainImg.src = img.src.replace('254', '1400');
+          }
+        }
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Dental Pricing",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Get started Today"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Choose Your Starter Order"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Product Image"
+    },
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Product Title",
+      "default": "Custom Teeth Whitening Kit - Pens"
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Rating Text",
+      "default": "40K+ happy patients"
+    },
+    {
+      "type": "text",
+      "id": "note_text",
+      "label": "Note Text",
+      "default": "Easy Onboarding will begin after checkout."
+    },
+    {
+      "type": "text",
+      "id": "savings_text",
+      "label": "Savings Headline",
+      "default": "Save Up To 56% Today with DSO Pricing"
+    },
+    {
+      "type": "text",
+      "id": "order_btn_text",
+      "label": "Order Button Text",
+      "default": "start your order"
+    },
+    {
+      "type": "url",
+      "id": "order_link",
+      "label": "Order Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery_image",
+      "name": "Gallery Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Thumbnail Image"
+        }
+      ]
+    },
+    {
+      "type": "pricing_tier",
+      "name": "Pricing Tier",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Tier Name",
+          "default": "100/units - Startups"
+        },
+        {
+          "type": "text",
+          "id": "unit_price",
+          "label": "Unit Price",
+          "default": "$34.00/unit"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Total Price",
+          "default": "$3,400.00"
+        },
+        {
+          "type": "text",
+          "id": "original_price",
+          "label": "Original Price (strikethrough)"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge Text"
+        },
+        {
+          "type": "select",
+          "id": "badge_style",
+          "label": "Badge Style",
+          "options": [
+            { "value": "popular", "label": "Most Popular (Green)" },
+            { "value": "best", "label": "Best Deal (Yellow)" }
+          ],
+          "default": "popular"
+        },
+        {
+          "type": "checkbox",
+          "id": "selected",
+          "label": "Selected by default",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "perks",
+          "label": "Perks (comma separated)"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Does The Whitening Work?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Yes, our professional-grade formula uses 35% Carbamide Peroxide for effective whitening results.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dental Pricing",
+      "blocks": [
+        { "type": "gallery_image" },
+        { "type": "gallery_image" },
+        { "type": "gallery_image" },
+        { "type": "gallery_image" },
+        { "type": "gallery_image" },
+        { "type": "pricing_tier", "settings": { "name": "50/units - Trial Order", "unit_price": "$46.00/unit", "price": "$2,300.00", "original_price": "", "badge": "", "selected": false } },
+        { "type": "pricing_tier", "settings": { "name": "100/units - Startups", "unit_price": "$34.00/unit", "price": "$3,400.00", "original_price": "$4,600.00", "badge": "Most Popular", "badge_style": "popular", "selected": true, "perks": "Money Back Guarantee, Free Shipping, Tax Included" } },
+        { "type": "pricing_tier", "settings": { "name": "250/units - Established", "unit_price": "$29.00/unit", "price": "$7,250.00", "original_price": "$11,500.00", "badge": "BEST DEAL", "badge_style": "best", "selected": false } },
+        { "type": "pricing_tier", "settings": { "name": "1000/units - DSOs", "unit_price": "$26.00/unit", "price": "$26,000.00", "original_price": "$46,000.00", "selected": false } },
+        { "type": "faq", "settings": { "question": "Does The Whitening Work?", "answer": "<p>Yes, our professional-grade formula delivers visible results. Most patients see improvement after the first session.</p>" } },
+        { "type": "faq", "settings": { "question": "Why Is The Minimum 50 Units?", "answer": "<p>50 units allows us to offer competitive pricing while covering custom design and production setup costs.</p>" } },
+        { "type": "faq", "settings": { "question": "How Do Offices Use The Kits To Attract New Patients?", "answer": "<p>Many practices use whitening as a new patient special, post-treatment gift, or add-on during hygiene appointments.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

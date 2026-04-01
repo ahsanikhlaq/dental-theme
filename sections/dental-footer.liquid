@@ -1,0 +1,86 @@
+{{ 'dental-landing.css' | asset_url | stylesheet_tag }}
+
+<footer class="dental-footer">
+  <div class="dental-footer__inner">
+    <a href="/" class="dental-footer__logo">
+      {%- if section.settings.logo != blank -%}
+        <img src="{{ section.settings.logo | image_url: width: 384 }}" alt="{{ shop.name }}" width="192" height="65" loading="lazy">
+      {%- else -%}
+        <img src="{{ 'dental-logo.png' | asset_url }}" alt="{{ shop.name }}" width="192" height="65" loading="lazy">
+      {%- endif -%}
+    </a>
+
+    <div class="dental-footer__bottom">
+      <p class="dental-footer__copyright">{{ section.settings.copyright }}</p>
+
+      <nav class="dental-footer__links">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'link' -%}
+            <a href="{{ block.settings.url }}" class="dental-footer__link" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+          {%- endif -%}
+        {%- endfor -%}
+      </nav>
+
+      <div class="dental-footer__socials">
+        {%- if section.settings.facebook != blank -%}
+          <a href="{{ section.settings.facebook }}" class="dental-footer__social" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.twitter != blank -%}
+          <a href="{{ section.settings.twitter }}" class="dental-footer__social" aria-label="Twitter" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733-16zM4.935 5.277l9.458 13.446h1.172L6.107 5.277z"/></svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.instagram != blank -%}
+          <a href="{{ section.settings.instagram }}" class="dental-footer__social" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.youtube != blank -%}
+          <a href="{{ section.settings.youtube }}" class="dental-footer__social" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75,15.02 15.5,11.75 9.75,8.48" fill="white"/></svg>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>{%- comment -%} Close dental-page wrapper from hero {%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Dental Footer",
+  "tag": "div",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Footer Logo" },
+    { "type": "text", "id": "copyright", "label": "Copyright Text", "default": "Copyright 2024 The Dental Origin. All rights reserved." },
+    { "type": "url", "id": "facebook", "label": "Facebook URL" },
+    { "type": "url", "id": "twitter", "label": "Twitter/X URL" },
+    { "type": "url", "id": "instagram", "label": "Instagram URL" },
+    { "type": "url", "id": "youtube", "label": "YouTube URL" }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Footer Link",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Privacy Policy" },
+        { "type": "url", "id": "url", "label": "URL" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dental Footer",
+      "blocks": [
+        { "type": "link", "settings": { "label": "Privacy Policy" } },
+        { "type": "link", "settings": { "label": "Terms & Conditions" } },
+        { "type": "link", "settings": { "label": "Terms of Sale" } },
+        { "type": "link", "settings": { "label": "Complaints" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
